@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 const navLinks = [
-  { href: "/best-3", label: "おすすめ3選" },
+  { href: "/best-3", label: "おすすめ5選" },
   { href: "/about", label: "運営者情報" },
   { href: "/contact", label: "お問い合わせ" },
 ];
@@ -17,8 +17,8 @@ export function Header() {
       <div className="max-w-5xl mx-auto flex items-center justify-between px-4 h-16">
         <Link href="/" className="flex items-center gap-2 font-bold text-lg text-primary-dark">
           <span className="text-2xl">✈</span>
-          <span className="hidden sm:inline">Working Holiday Pass</span>
-          <span className="sm:hidden">WH Pass</span>
+          <span className="hidden sm:inline">Abroad Pass</span>
+          <span className="sm:hidden">Abroad Pass</span>
         </Link>
 
         {/* Desktop nav */}

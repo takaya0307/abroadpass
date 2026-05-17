@@ -3,15 +3,15 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { CtaButton } from "@/components/CtaButton";
 
 export const metadata: Metadata = {
-  title: "運営者情報｜Working Holiday Pass",
+  title: "運営者情報｜Abroad Pass",
   description:
-    "Working Holiday Passの運営者プロフィール。留学経験者として、ワーホリ・留学エージェントの本音比較をお届けします。",
+    "Abroad Passの運営者プロフィール。留学経験者として、ワーホリ・留学エージェントの本音比較をお届けします。",
 };
 
 export default function AboutPage() {
   return (
     <div className="max-w-3xl mx-auto px-4 py-16">
-      <SectionHeading tag="h1" sub="Working Holiday Pass 運営者">
+      <SectionHeading tag="h1" sub="Abroad Pass 運営者">
         運営者プロフィール
       </SectionHeading>
 
@@ -22,7 +22,7 @@ export default function AboutPage() {
           </div>
           <div>
             <p className="font-bold text-lg">Takaya</p>
-            <p className="text-sm text-muted">Working Holiday Pass 運営者</p>
+            <p className="text-sm text-muted">Abroad Pass 運営者</p>
           </div>
         </div>
 
@@ -63,7 +63,7 @@ export default function AboutPage() {
 
       <div className="text-center">
         <CtaButton href="/best-3" variant="accent">
-          おすすめエージェント3選を見る →
+          おすすめエージェント5選を見る →
         </CtaButton>
       </div>
     </div>

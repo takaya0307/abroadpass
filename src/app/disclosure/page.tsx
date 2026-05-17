@@ -4,7 +4,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 export const metadata: Metadata = {
   title: "広告掲載について（PR表記）",
   description:
-    "Working Holiday Passにおける広告掲載・アフィリエイトプログラムについての説明。ステマ規制対応。",
+    "Abroad Passにおける広告掲載・アフィリエイトプログラムについての説明。ステマ規制対応。",
 };
 
 export default function DisclosurePage() {
@@ -17,7 +17,7 @@ export default function DisclosurePage() {
       <div className="bg-accent/5 border border-accent/20 rounded-2xl p-6 mb-10">
         <p className="font-bold text-foreground mb-2">【広告についての明示】</p>
         <p className="text-sm leading-relaxed text-foreground/80">
-          当サイト「Working Holiday Pass」は、アフィリエイトプログラムに参加しています。
+          当サイト「Abroad Pass」は、アフィリエイトプログラムに参加しています。
           記事内にはアフィリエイトリンク（広告リンク）が含まれており、リンク経由で商品・
           サービスの申し込みがあった場合、当サイトに報酬が支払われることがあります。
         </p>

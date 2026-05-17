@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://workingholidaypass.jp/sitemap.xml",
+    sitemap: "https://abroadpass.jp/sitemap.xml",
   };
 }

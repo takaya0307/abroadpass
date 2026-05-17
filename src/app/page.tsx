@@ -54,10 +54,26 @@ const agents = [
     badge: "ワーホリ本命ならここ",
     color: "border-green-500",
   },
+  {
+    rank: 4,
+    name: "留学ジャーナル",
+    tagline: "創業50年超の老舗",
+    points: ["国別専門カウンセラー", "正規留学に強い", "圧倒的な情報量"],
+    badge: "実績重視ならここ",
+    color: "border-purple-500",
+  },
+  {
+    rank: 5,
+    name: "ウインテック留学センター",
+    tagline: "完全オーダーメイド",
+    points: ["一人ひとりに合わせた設計", "親身なカウンセリング", "ユニークな留学体験"],
+    badge: "個別対応ならここ",
+    color: "border-rose-500",
+  },
 ];
 
 const steps = [
-  { num: "01", title: "エージェントを比較", desc: "当サイトで3社の特徴・費用を比較" },
+  { num: "01", title: "エージェントを比較", desc: "当サイトで5社の特徴・費用を比較" },
   { num: "02", title: "無料相談を予約", desc: "気になるエージェントに無料相談を申し込み" },
   { num: "03", title: "プランを決定", desc: "カウンセラーと一緒に最適な渡航プランを設計" },
   { num: "04", title: "ワーホリ出発！", desc: "準備サポートを受けて安心して渡航" },
@@ -82,11 +98,11 @@ export default function Home() {
           <p className="text-muted text-base md:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
             「いくらかかる？」「英語力ゼロでも大丈夫？」「帰国後の仕事は？」
             <br className="hidden sm:block" />
-            そんな不安を、実際に3社の無料相談を受けた経験者が解消します。
+            そんな不安を、実際に各社の無料相談を受けた経験者が解消します。
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <CtaButton href="/best-3" variant="accent">
-              おすすめ3選を見る →
+              おすすめ5選を見る →
             </CtaButton>
             <CtaButton href="/about" variant="primary">
               運営者の体験談を読む
@@ -124,10 +140,10 @@ export default function Home() {
       {/* Top 3 Preview */}
       <section className="py-16 md:py-20 bg-soft">
         <div className="max-w-5xl mx-auto px-4">
-          <SectionHeading sub="留学経験者が3社の無料相談を受けて厳選">
-            留学エージェント おすすめ3選
+          <SectionHeading sub="留学経験者が各社の無料相談を受けて厳選">
+            留学エージェント おすすめ5選
           </SectionHeading>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {agents.map((a) => (
               <div
                 key={a.name}
@@ -156,7 +172,7 @@ export default function Home() {
           </div>
           <div className="text-center mt-10">
             <CtaButton href="/best-3" variant="accent">
-              3社の詳細比較を見る →
+              5社の詳細比較を見る →
             </CtaButton>
           </div>
         </div>
@@ -192,7 +208,7 @@ export default function Home() {
             まずは無料相談で「自分に合うプラン」を聞いてみませんか？
           </p>
           <CtaButton href="/best-3" variant="accent">
-            おすすめ3選を今すぐチェック →
+            おすすめ5選を今すぐチェック →
           </CtaButton>
         </div>
       </section>

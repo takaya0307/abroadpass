@@ -3,7 +3,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 
 export const metadata: Metadata = {
   title: "プライバシーポリシー",
-  description: "Working Holiday Passのプライバシーポリシー。個人情報の取り扱いについて。",
+  description: "Abroad Passのプライバシーポリシー。個人情報の取り扱いについて。",
 };
 
 export default function PrivacyPage() {
@@ -15,7 +15,7 @@ export default function PrivacyPage() {
         <section>
           <h2 className="text-lg font-bold text-foreground mb-3">1. 個人情報の取得について</h2>
           <p>
-            当サイト「Working Holiday Pass」（以下「当サイト」）では、
+            当サイト「Abroad Pass」（以下「当サイト」）では、
             お問い合わせの際に、お名前・メールアドレス等の個人情報をご入力いただく場合がございます。
             取得した個人情報は、お問い合わせへの回答や必要な情報の提供のために利用いたします。
           </p>
@@ -86,7 +86,7 @@ export default function PrivacyPage() {
         <p className="text-muted pt-4 border-t border-border">
           制定日：2026年5月9日
           <br />
-          運営者：Takaya（Working Holiday Pass）
+          運営者：Takaya（Abroad Pass）
         </p>
       </div>
     </div>

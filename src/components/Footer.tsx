@@ -7,7 +7,7 @@ export function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
           {/* Brand */}
           <div>
-            <p className="font-bold text-white text-lg mb-2">✈ Working Holiday Pass</p>
+            <p className="font-bold text-white text-lg mb-2">✈ Abroad Pass</p>
             <p className="text-white/50 text-xs leading-relaxed">
               留学経験者が本音で比較する
               <br />
@@ -21,7 +21,7 @@ export function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link href="/best-3" className="hover:text-white transition-colors">
-                  おすすめエージェント3選
+                  おすすめエージェント5選
                 </Link>
               </li>
               <li>
@@ -56,7 +56,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-white/10 mt-10 pt-6 text-center text-white/40 text-xs">
-          &copy; {new Date().getFullYear()} Working Holiday Pass All rights reserved.
+          &copy; {new Date().getFullYear()} Abroad Pass All rights reserved.
         </div>
       </div>
     </footer>

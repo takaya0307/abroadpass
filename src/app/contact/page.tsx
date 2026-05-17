@@ -3,7 +3,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 
 export const metadata: Metadata = {
   title: "お問い合わせ",
-  description: "Working Holiday Passへのお問い合わせはこちらから。",
+  description: "Abroad Passへのお問い合わせはこちらから。",
 };
 
 export default function ContactPage() {
