@@ -24,16 +24,6 @@ export function Footer() {
                   おすすめエージェント5選
                 </Link>
               </li>
-              <li>
-                <Link href="/about" className="hover:text-white transition-colors">
-                  運営者情報
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="hover:text-white transition-colors">
-                  お問い合わせ
-                </Link>
-              </li>
             </ul>
           </div>
 

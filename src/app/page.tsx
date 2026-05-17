@@ -104,9 +104,6 @@ export default function Home() {
             <CtaButton href="/best-3" variant="accent">
               おすすめ5選を見る →
             </CtaButton>
-            <CtaButton href="/about" variant="primary">
-              運営者の体験談を読む
-            </CtaButton>
           </div>
         </div>
       </section>

@@ -5,8 +5,6 @@ import { useState } from "react";
 
 const navLinks = [
   { href: "/best-3", label: "おすすめ5選" },
-  { href: "/about", label: "運営者情報" },
-  { href: "/contact", label: "お問い合わせ" },
 ];
 
 export function Header() {
@@ -33,7 +31,7 @@ export function Header() {
             </Link>
           ))}
           <Link
-            href="/best-3"
+            href="/best-3#cost"
             className="text-sm font-bold bg-accent hover:bg-accent-dark text-white px-4 py-2 rounded-full transition-colors"
           >
             無料で比較する
@@ -70,7 +68,7 @@ export function Header() {
             </Link>
           ))}
           <Link
-            href="/best-3"
+            href="/best-3#cost"
             className="block mt-3 text-center text-sm font-bold bg-accent text-white px-4 py-3 rounded-full"
             onClick={() => setOpen(false)}
           >
