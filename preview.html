@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Working Holiday Pass｜ワーホリ・留学エージェント比較サイト</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans JP',system-ui,sans-serif;color:#0f172a;background:#fff;min-height:100vh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+.container{max-width:1024px;margin:0 auto;padding:0 16px}
+
+/* Header */
+.header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.95);backdrop-filter:blur(8px);border-bottom:1px solid #e2e8f0}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:1024px;margin:0 auto;padding:0 16px}
+.logo{display:flex;align-items:center;gap:8px;font-weight:700;font-size:18px;color:#0284c7}
+.nav{display:flex;align-items:center;gap:24px}
+.nav a{font-size:14px;font-weight:500;color:#64748b;transition:color 0.2s}
+.nav a:hover{color:#0ea5e9}
+.btn-cta{display:inline-flex;align-items:center;justify-content:center;font-weight:700;border-radius:9999px;padding:10px 24px;font-size:14px;transition:all 0.2s;box-shadow:0 4px 12px rgba(0,0,0,0.1)}
+.btn-cta:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,0.15)}
+.btn-accent{background:#f59e0b;color:#fff}
+.btn-accent:hover{background:#d97706}
+.btn-primary{background:#0ea5e9;color:#fff}
+.btn-primary:hover{background:#0284c7}
+.btn-nav{padding:8px 16px;font-size:13px;box-shadow:none}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,rgba(14,165,233,0.05),#fff,rgba(245,158,11,0.05));padding:80px 16px;text-align:center}
+.hero-sub{color:#0ea5e9;font-weight:700;font-size:14px;margin-bottom:16px;letter-spacing:1px}
+.hero h1{font-size:clamp(28px,5vw,48px);font-weight:900;line-height:1.4;margin-bottom:24px}
+.hero h1 span{color:#0ea5e9}
+.hero-desc{color:#64748b;font-size:16px;max-width:600px;margin:0 auto 40px;line-height:1.8}
+.hero-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+/* Section */
+.section{padding:64px 16px}
+.section-white{background:#fff}
+.section-soft{background:#f8fafc}
+.section-heading{text-align:center;margin-bottom:40px}
+.section-heading h2{font-size:clamp(22px,3.5vw,30px);font-weight:700}
+.section-heading p{margin-top:8px;color:#64748b;font-size:14px}
+
+/* Worry cards */
+.worry-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:1024px;margin:0 auto}
+.worry-card{display:flex;align-items:flex-start;gap:16px;padding:24px;border-radius:16px;border:1px solid #e2e8f0;background:#f8fafc;transition:all 0.2s}
+.worry-card:hover{border-color:rgba(14,165,233,0.3);box-shadow:0 4px 12px rgba(0,0,0,0.06)}
+.worry-card .emoji{font-size:28px;flex-shrink:0}
+.worry-card .title{font-weight:700;font-size:15px;margin-bottom:4px}
+.worry-card:hover .title{color:#0ea5e9}
+.worry-card .desc{font-size:13px;color:#64748b}
+
+/* Agent cards */
+.agent-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1024px;margin:0 auto}
+.agent-card{background:#fff;border-radius:16px;padding:24px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:box-shadow 0.2s;border-top:4px solid}
+.agent-card:hover{box-shadow:0 8px 24px rgba(0,0,0,0.08)}
+.agent-card:nth-child(1){border-top-color:#f59e0b}
+.agent-card:nth-child(2){border-top-color:#0ea5e9}
+.agent-card:nth-child(3){border-top-color:#22c55e}
+.agent-rank{background:#0f172a;color:#fff;font-size:12px;font-weight:700;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.agent-header{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.agent-name{font-size:18px;font-weight:700}
+.agent-tagline{font-size:13px;color:#64748b;margin-bottom:16px}
+.agent-list{list-style:none;margin-bottom:20px}
+.agent-list li{display:flex;align-items:flex-start;gap:8px;font-size:13px;margin-bottom:8px}
+.agent-list li::before{content:"✓";color:#0ea5e9;font-weight:700;margin-top:1px}
+.agent-badge{font-size:12px;font-weight:700;padding:4px 12px;border-radius:9999px;display:inline-block}
+.badge-accent{color:#d97706;background:rgba(245,158,11,0.1)}
+.badge-primary{color:#0284c7;background:rgba(14,165,233,0.1)}
+.badge-green{color:#16a34a;background:rgba(34,197,94,0.1)}
+
+/* Steps */
+.steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;max-width:1024px;margin:0 auto;text-align:center}
+.step-num{font-size:36px;font-weight:900;color:rgba(14,165,233,0.2);margin-bottom:8px}
+.step-title{font-weight:700;font-size:14px;margin-bottom:4px}
+.step-desc{font-size:13px;color:#64748b}
+
+/* Final CTA */
+.final-cta{background:linear-gradient(to right,#0ea5e9,#0284c7);padding:64px 16px;text-align:center;color:#fff}
+.final-cta h2{font-size:clamp(20px,3vw,28px);font-weight:700;margin-bottom:16px}
+.final-cta p{color:rgba(255,255,255,0.8);margin-bottom:32px;line-height:1.8;font-size:15px}
+
+/* PR */
+.pr-bar{background:#f1f5f9;text-align:center;padding:12px;font-size:12px;color:#64748b}
+.pr-bar a{text-decoration:underline;margin-left:4px}
+.pr-bar a:hover{color:#0ea5e9}
+
+/* Footer */
+footer{background:#0f172a;color:rgba(255,255,255,0.6);font-size:13px;padding:48px 16px}
+.footer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;max-width:1024px;margin:0 auto}
+.footer-brand{font-weight:700;color:#fff;font-size:16px;margin-bottom:8px}
+.footer-brand-desc{color:rgba(255,255,255,0.4);font-size:12px;line-height:1.6}
+.footer-title{font-weight:700;color:#fff;margin-bottom:12px;font-size:14px}
+.footer-links{list-style:none}
+.footer-links li{margin-bottom:8px}
+.footer-links a:hover{color:#fff}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.1);margin-top:40px;padding-top:24px;text-align:center;color:rgba(255,255,255,0.3);font-size:12px}
+
+@media(max-width:768px){
+  .nav{display:none}
+  .worry-grid,.agent-grid{grid-template-columns:1fr}
+  .steps-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr}
+  .hero-buttons{flex-direction:column;align-items:center}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+<div class="header-inner">
+  <a href="#" class="logo"><span style="font-size:24px">✈</span> Working Holiday Pass</a>
+  <nav class="nav">
+    <a href="#best3">おすすめ3選</a>
+    <a href="#about">運営者情報</a>
+    <a href="#">お問い合わせ</a>
+    <a href="#best3" class="btn-cta btn-accent btn-nav">無料で比較する</a>
+  </nav>
+</div>
+</header>
+
+<main style="flex:1">
+
+<section class="hero">
+<div class="container">
+  <p class="hero-sub">留学経験者が本音で比較</p>
+  <h1>30歳までに行かないと<br><span>後悔するワーホリ</span>、<br>最初の一歩はエージェント選びから。</h1>
+  <p class="hero-desc">「いくらかかる？」「英語力ゼロでも大丈夫？」「帰国後の仕事は？」<br>そんな不安を、実際に3社の無料相談を受けた経験者が解消します。</p>
+  <div class="hero-buttons">
+    <a href="#best3" class="btn-cta btn-accent">おすすめ3選を見る →</a>
+    <a href="#about" class="btn-cta btn-primary">運営者の体験談を読む</a>
+  </div>
+</div>
+</section>
+
+<section class="section section-white">
+<div class="container">
+  <div class="section-heading"><h2>こんな不安、ありませんか？</h2><p>あなたの悩み、全部カバーしています</p></div>
+  <div class="worry-grid">
+    <a href="#best3" class="worry-card"><span class="emoji">💰</span><div><p class="title">費用が不安</p><p class="desc">「100万円で足りる？」リアルな費用を公開中</p></div></a>
+    <a href="#best3" class="worry-card"><span class="emoji">🗣</span><div><p class="title">英語力ゼロで大丈夫？</p><p class="desc">英語力不問でサポートしてくれるエージェントを比較</p></div></a>
+    <a href="#best3" class="worry-card"><span class="emoji">💼</span><div><p class="title">帰国後のキャリアが心配</p><p class="desc">ワーホリ後の就職、実例をもとに解説</p></div></a>
+    <a href="#best3" class="worry-card"><span class="emoji">🏢</span><div><p class="title">エージェント選びで失敗したくない</p><p class="desc">3社の無料相談を実際に体験して比較しました</p></div></a>
+  </div>
+</div>
+</section>
+
+<section id="best3" class="section section-soft">
+<div class="container">
+  <div class="section-heading"><h2>留学エージェント おすすめ3選</h2><p>留学経験者が3社の無料相談を受けて厳選</p></div>
+  <div class="agent-grid">
+    <div class="agent-card">
+      <div class="agent-header"><span class="agent-rank">1</span><h3 class="agent-name">スマ留</h3></div>
+      <p class="agent-tagline">業界最安級×知名度No.1</p>
+      <ul class="agent-list"><li>最短1週間〜対応</li><li>無料面談のハードルが低い</li><li>短期も長期もOK</li></ul>
+      <span class="agent-badge badge-accent">コスパ重視ならここ</span>
+    </div>
+    <div class="agent-card">
+      <div class="agent-header"><span class="agent-rank">2</span><h3 class="agent-name">ISS留学ライフ</h3></div>
+      <p class="agent-tagline">Z会グループの安心感</p>
+      <ul class="agent-list"><li>確定率100%の実績</li><li>社会人キャリア留学に強い</li><li>50年以上の歴史</li></ul>
+      <span class="agent-badge badge-primary">信頼重視ならここ</span>
+    </div>
+    <div class="agent-card">
+      <div class="agent-header"><span class="agent-rank">3</span><h3 class="agent-name">ラストリゾート</h3></div>
+      <p class="agent-tagline">ワーホリ特化の老舗</p>
+      <ul class="agent-list"><li>資料DLから段階的に相談可</li><li>ワーホリ専門カウンセラー</li><li>10万人以上の渡航実績</li></ul>
+      <span class="agent-badge badge-green">ワーホリ本命ならここ</span>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:40px"><a href="#" class="btn-cta btn-accent">3社の詳細比較を見る →</a></div>
+</div>
+</section>
+
+<section class="section section-white">
+<div class="container">
+  <div class="section-heading"><h2>たった4ステップで渡航準備完了</h2><p>ワーホリ出発までの流れ</p></div>
+  <div class="steps-grid">
+    <div><div class="step-num">01</div><p class="step-title">エージェントを比較</p><p class="step-desc">当サイトで3社の特徴・費用を比較</p></div>
+    <div><div class="step-num">02</div><p class="step-title">無料相談を予約</p><p class="step-desc">気になるエージェントに無料相談を申し込み</p></div>
+    <div><div class="step-num">03</div><p class="step-title">プランを決定</p><p class="step-desc">カウンセラーと一緒に最適な渡航プランを設計</p></div>
+    <div><div class="step-num">04</div><p class="step-title">ワーホリ出発！</p><p class="step-desc">準備サポートを受けて安心して渡航</p></div>
+  </div>
+</div>
+</section>
+
+<section class="final-cta">
+  <h2>迷っている時間が一番もったいない。</h2>
+  <p>ワーホリビザには年齢制限があります。<br>まずは無料相談で「自分に合うプラン」を聞いてみませんか？</p>
+  <a href="#best3" class="btn-cta btn-accent">おすすめ3選を今すぐチェック →</a>
+</section>
+
+<div class="pr-bar">※ 当サイトはアフィリエイト広告を利用しています。詳しくは<a href="#">広告掲載について</a>をご確認ください。</div>
+
+</main>
+
+<footer>
+<div class="footer-grid">
+  <div><p class="footer-brand">✈ Working Holiday Pass</p><p class="footer-brand-desc">留学経験者が本音で比較する<br>ワーホリ・留学エージェント情報サイト</p></div>
+  <div><p class="footer-title">コンテンツ</p><ul class="footer-links"><li><a href="#">おすすめエージェント3選</a></li><li><a href="#">運営者情報</a></li><li><a href="#">お問い合わせ</a></li></ul></div>
+  <div><p class="footer-title">サイト情報</p><ul class="footer-links"><li><a href="#">プライバシーポリシー</a></li><li><a href="#">広告掲載について（PR表記）</a></li></ul></div>
+</div>
+<div class="footer-bottom">&copy; 2026 Working Holiday Pass All rights reserved.</div>
+</footer>
+
+</body>
+</html>
