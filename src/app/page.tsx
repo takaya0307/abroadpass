@@ -46,7 +46,7 @@ const agents = [
     points: ["確定率100%の実績", "社会人キャリア留学に強い", "50年以上の歴史"],
     badge: "信頼重視ならここ",
     color: "border-primary",
-    href: "/best-3#agent-2",
+    href: "/iss",
   },
   {
     rank: 3,

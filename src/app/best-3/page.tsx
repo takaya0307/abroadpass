@@ -67,6 +67,7 @@ const agents = [
     ctaText: "ISS留学ライフに無料相談する",
     ctaHref: "https://px.a8.net/svt/ejp?a8mat=45C1IF+AMTQR6+5S4I+5Z6WX",
     pixel: "https://www12.a8.net/0.gif?a8mat=45C1IF+AMTQR6+5S4I+5Z6WX",
+    reviewHref: "/iss",
     color: "border-primary bg-primary/5",
     badgeColor: "bg-primary text-white",
   },
