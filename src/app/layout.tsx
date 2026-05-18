@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     description:
       "留学経験者が本音で比較。ワーホリ・留学エージェントのおすすめランキング。",
   },
+  verification: {
+    google: "8odUluQ21r17iPGaK8hrbP8Tec5DMhn6yyVpqDTB4q0",
+  },
   robots: {
     index: true,
     follow: true,
