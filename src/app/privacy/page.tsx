@@ -15,9 +15,10 @@ export default function PrivacyPage() {
         <section>
           <h2 className="text-lg font-bold text-foreground mb-3">1. 個人情報の取得について</h2>
           <p>
-            当サイト「Abroad Pass」（以下「当サイト」）では、
-            お問い合わせの際に、お名前・メールアドレス等の個人情報をご入力いただく場合がございます。
-            取得した個人情報は、お問い合わせへの回答や必要な情報の提供のために利用いたします。
+            当サイト「Abroad Pass」（以下「当サイト」）では、現時点において
+            ユーザーから直接個人情報を収集するフォーム等は設置していません。
+            ただし、アクセス解析ツールや広告配信サービスを通じて、
+            一部の情報が自動的に収集される場合があります。
           </p>
         </section>
 
@@ -50,8 +51,7 @@ export default function PrivacyPage() {
         <section>
           <h2 className="text-lg font-bold text-foreground mb-3">4. 広告について</h2>
           <p>
-            当サイトは、第三者配信の広告サービス（A8.net、もしもアフィリエイト、
-            バリューコマース、アクセストレード、afb、Amazonアソシエイト等）を利用しています。
+            当サイトは、アフィリエイト広告サービス（A8.net）を利用しています。
             広告配信事業者は、ユーザーの興味に応じた広告を表示するためにCookieを使用する
             ことがあります。
           </p>

@@ -9,9 +9,9 @@ export function Footer() {
           <div>
             <p className="font-bold text-white text-lg mb-2">✈ Abroad Pass</p>
             <p className="text-white/50 text-xs leading-relaxed">
-              留学経験者が本音で比較する
+              費用・サポート・口コミで徹底比較する
               <br />
-              ワーホリ・留学エージェント情報サイト
+              留学エージェント情報サイト
             </p>
           </div>
 
