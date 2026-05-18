@@ -46,6 +46,18 @@ export default function RootLayout({
   return (
     <html lang="ja" className="antialiased">
       <head>
+        {/* Google Analytics GA4 */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-865GD970H6" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-865GD970H6');
+            `,
+          }}
+        />
         <link
           rel="preconnect"
           href="https://fonts.googleapis.com"
