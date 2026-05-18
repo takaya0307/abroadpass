@@ -37,6 +37,7 @@ const agents = [
     points: ["最短1週間〜対応", "無料面談のハードルが低い", "短期も長期もOK"],
     badge: "コスパ重視ならここ",
     color: "border-accent",
+    href: "/smaru",
   },
   {
     rank: 2,
@@ -45,6 +46,7 @@ const agents = [
     points: ["確定率100%の実績", "社会人キャリア留学に強い", "50年以上の歴史"],
     badge: "信頼重視ならここ",
     color: "border-primary",
+    href: "/best-3#agent-2",
   },
   {
     rank: 3,
@@ -53,6 +55,7 @@ const agents = [
     points: ["資料DLから段階的に相談可", "ワーホリ専門カウンセラー", "10万人以上の渡航実績"],
     badge: "ワーホリ本命ならここ",
     color: "border-green-500",
+    href: "/best-3#agent-3",
   },
   {
     rank: 4,
@@ -61,6 +64,7 @@ const agents = [
     points: ["国別専門カウンセラー", "正規留学に強い", "圧倒的な情報量"],
     badge: "実績重視ならここ",
     color: "border-purple-500",
+    href: "/best-3#agent-4",
   },
   {
     rank: 5,
@@ -69,6 +73,7 @@ const agents = [
     points: ["一人ひとりに合わせた設計", "親身なカウンセリング", "ユニークな留学体験"],
     badge: "個別対応ならここ",
     color: "border-rose-500",
+    href: "/best-3#agent-5",
   },
 ];
 
@@ -144,7 +149,7 @@ export default function Home() {
             {agents.map((a) => (
               <Link
                 key={a.name}
-                href={`/best-3#agent-${a.rank}`}
+                href={a.href}
                 className={`bg-white rounded-2xl border-t-4 ${a.color} p-6 shadow-sm hover:shadow-lg transition-shadow block`}
               >
                 <div className="flex items-center gap-3 mb-4">

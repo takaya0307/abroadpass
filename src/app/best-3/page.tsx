@@ -38,6 +38,7 @@ const agents = [
     ctaText: "スマ留の無料面談を予約する",
     ctaHref: "https://px.a8.net/svt/ejp?a8mat=45C1IF+B43BAQ+476I+5YJRM",
     pixel: "https://www15.a8.net/0.gif?a8mat=45C1IF+B43BAQ+476I+5YJRM",
+    reviewHref: "/smaru",
     color: "border-accent bg-accent/5",
     badgeColor: "bg-accent text-white",
   },
@@ -352,6 +353,14 @@ export default function Best5Page() {
                     style={{ border: "none" }}
                   />
                   <p className="text-xs text-muted mt-2">※ 公式サイトに移動します（無料）</p>
+                  {agent.reviewHref && (
+                    <Link
+                      href={agent.reviewHref}
+                      className="inline-block mt-4 text-sm text-primary underline hover:text-primary/70 transition-colors"
+                    >
+                      口コミ・評判を詳しく見る →
+                    </Link>
+                  )}
                 </div>
               </div>
             </article>
