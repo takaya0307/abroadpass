@@ -24,7 +24,7 @@ const worries = [
   {
     emoji: "🏢",
     title: "エージェント選びで失敗したくない",
-    desc: "3社の無料相談を実際に体験して比較しました",
+    desc: "5社の特徴・料金・サポートを徹底比較しました",
     href: "/best-3",
   },
 ];
@@ -86,19 +86,19 @@ export default function Home() {
       <section className="relative bg-gradient-to-br from-primary/5 via-white to-accent/5 py-20 md:py-28">
         <div className="max-w-5xl mx-auto px-4 text-center">
           <p className="text-primary font-bold text-sm md:text-base mb-4 tracking-wide">
-            留学経験者が本音で比較
+            留学エージェント比較サイト
           </p>
           <h1 className="text-3xl md:text-5xl font-black leading-tight mb-6">
-            30歳までに行かないと
+            どのエージェントを選べばいい？
             <br className="hidden md:block" />
-            <span className="text-primary">後悔するワーホリ</span>、
+            <span className="text-primary">5社を徹底比較</span>して
             <br />
-            最初の一歩はエージェント選びから。
+            あなたに合った一社が見つかります。
           </h1>
           <p className="text-muted text-base md:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
             「いくらかかる？」「英語力ゼロでも大丈夫？」「帰国後の仕事は？」
             <br className="hidden sm:block" />
-            そんな不安を、実際に各社の無料相談を受けた経験者が解消します。
+            そんな不安に、費用・サポート・口コミをもとに正直にお答えします。
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <CtaButton href="/best-3" variant="accent">
@@ -137,14 +137,15 @@ export default function Home() {
       {/* Top 3 Preview */}
       <section className="py-16 md:py-20 bg-soft">
         <div className="max-w-5xl mx-auto px-4">
-          <SectionHeading sub="留学経験者が各社の無料相談を受けて厳選">
+          <SectionHeading sub="費用・サポート・口コミで徹底比較">
             留学エージェント おすすめ5選
           </SectionHeading>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {agents.map((a) => (
-              <div
+              <Link
                 key={a.name}
-                className={`bg-white rounded-2xl border-t-4 ${a.color} p-6 shadow-sm hover:shadow-lg transition-shadow`}
+                href={`/best-3#agent-${a.rank}`}
+                className={`bg-white rounded-2xl border-t-4 ${a.color} p-6 shadow-sm hover:shadow-lg transition-shadow block`}
               >
                 <div className="flex items-center gap-3 mb-4">
                   <span className="bg-foreground text-white text-xs font-bold w-7 h-7 rounded-full flex items-center justify-center">
@@ -164,7 +165,7 @@ export default function Home() {
                 <p className="text-xs font-bold text-accent bg-accent/10 rounded-full px-3 py-1 inline-block">
                   {a.badge}
                 </p>
-              </div>
+              </Link>
             ))}
           </div>
           <div className="text-center mt-10">

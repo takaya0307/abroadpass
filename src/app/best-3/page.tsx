@@ -6,7 +6,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "留学エージェントおすすめ5選【2026年最新】本音比較",
   description:
-    "留学経験者が5社の無料相談を受けて厳選。スマ留・ISS留学ライフ・ラストリゾート・留学ジャーナル・ウインテック留学センターを費用・サポート・口コミで徹底比較。ワーホリ・社会人留学・大学生留学に最適なエージェントが見つかります。",
+    "スマ留・ISS留学ライフ・ラストリゾート・留学ジャーナル・ウインテック留学センターを費用・サポート・口コミで徹底比較。ワーホリ・社会人留学・大学生留学に最適なエージェントが見つかります。",
   alternates: {
     canonical: "https://abroadpass.jp/best-3",
   },
@@ -209,8 +209,8 @@ export default function Best5Page() {
             留学エージェント おすすめ5選
           </h1>
           <p className="text-muted text-sm md:text-base max-w-2xl mx-auto leading-relaxed mb-8">
-            留学経験者が実際に各社の無料相談を受けて厳選。
-            費用・サポート・口コミを正直に比較しました。
+            費用・サポート・口コミをもとに5社を正直に比較。
+            ワーホリ・語学留学・社会人留学など目的別に
             あなたに合ったエージェントが見つかります。
           </p>
 
@@ -444,7 +444,7 @@ export default function Best5Page() {
               ISS留学ライフを見る
             </CtaButton>
             <CtaButton href="#agent-3" variant="accent">
-              ラス��リゾートを見る
+              ラストリゾートを見る
             </CtaButton>
             <CtaButton href="#agent-4" variant="accent">
               留学ジャーナルを見る
