@@ -75,8 +75,8 @@ const agents = [
 const steps = [
   { num: "01", title: "エージェントを比較", desc: "当サイトで5社の特徴・費用を比較" },
   { num: "02", title: "無料相談を予約", desc: "気になるエージェントに無料相談を申し込み" },
-  { num: "03", title: "プランを決定", desc: "カウンセラーと一緒に最適な渡航プランを設計" },
-  { num: "04", title: "ワーホリ出発！", desc: "準備サポートを受けて安心して渡航" },
+  { num: "03", title: "プランを決定", desc: "カウンセラーと一緒に最適な留学プランを設計" },
+  { num: "04", title: "いざ出発！", desc: "準備サポートを受けて安心して渡航" },
 ];
 
 export default function Home() {
@@ -179,7 +179,7 @@ export default function Home() {
       {/* Steps */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4">
-          <SectionHeading sub="ワーホリ出発までの流れ">
+          <SectionHeading sub="留学出発までの流れ">
             たった4ステップで渡航準備完了
           </SectionHeading>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
@@ -201,9 +201,9 @@ export default function Home() {
             迷っている時間が一番もったいない。
           </h2>
           <p className="text-white/80 mb-8 leading-relaxed">
-            ワーホリビザには年齢制限があります。
+            留学を考え始めたなら、まず比較するのが近道です。
             <br />
-            まずは無料相談で「自分に合うプラン」を聞いてみませんか？
+            無料相談で「自分に合うプラン」を聞いてみませんか？
           </p>
           <CtaButton href="/best-3" variant="accent">
             おすすめ5選を今すぐチェック →
