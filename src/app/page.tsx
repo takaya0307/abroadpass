@@ -55,7 +55,7 @@ const agents = [
     points: ["資料DLから段階的に相談可", "ワーホリ専門カウンセラー", "10万人以上の渡航実績"],
     badge: "ワーホリ本命ならここ",
     color: "border-green-500",
-    href: "/best-3#agent-3",
+    href: "/lastresort",
   },
   {
     rank: 4,
@@ -64,7 +64,7 @@ const agents = [
     points: ["国別専門カウンセラー", "正規留学に強い", "圧倒的な情報量"],
     badge: "実績重視ならここ",
     color: "border-purple-500",
-    href: "/best-3#agent-4",
+    href: "/ryugakujournal",
   },
   {
     rank: 5,
@@ -73,7 +73,7 @@ const agents = [
     points: ["一人ひとりに合わせた設計", "親身なカウンセリング", "ユニークな留学体験"],
     badge: "個別対応ならここ",
     color: "border-rose-500",
-    href: "/best-3#agent-5",
+    href: "/wintech",
   },
 ];
 
