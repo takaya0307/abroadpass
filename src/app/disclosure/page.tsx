@@ -28,24 +28,16 @@ export default function DisclosurePage() {
           <h2 className="text-lg font-bold text-foreground mb-3">利用しているアフィリエイトサービス</h2>
           <ul className="list-disc pl-6 space-y-1">
             <li>A8.net</li>
-            <li>もしもアフィリエイト</li>
-            <li>バリューコマース</li>
-            <li>アクセストレード</li>
-            <li>afb（アフィビー）</li>
-            <li>TCSアフィリエイト</li>
-            <li>Amazonアソシエイト</li>
           </ul>
         </section>
 
         <section>
           <h2 className="text-lg font-bold text-foreground mb-3">コンテンツの独立性について</h2>
           <p>
-            広告収益の有無が、記事の内容やランキング・おすすめの順位に影響することはありません。
-            すべてのレビューは運営者の実体験・調査に基づいており、読者にとって有益な情報提供を
-            最優先としています。
+            各エージェントの情報は公式サイト・口コミサイト・各種公開情報をもとに作成しています。
+            読者にとって有益な情報提供を最優先とし、掲載内容の正確性・公平性に努めています。
           </p>
           <p className="mt-3">
-            報酬の高い案件を上位に配置するといった操作は一切行っておりません。
             メリットだけでなくデメリットも正直に記載し、読者が自分に合った選択をできるよう
             心がけています。
           </p>
