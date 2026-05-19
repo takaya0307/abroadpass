@@ -22,10 +22,10 @@ const worries = [
     href: "/best-3",
   },
   {
-    emoji: "🏢",
-    title: "エージェント選びで失敗したくない",
-    desc: "5社の特徴・料金・サポートを徹底比較しました",
-    href: "/best-3",
+    emoji: "🤔",
+    title: "そもそもエージェントって必要？",
+    desc: "使わないと何が大変？費用は？疑問にまとめて答えます",
+    href: "/agent-hitsuyou",
   },
 ];
 
