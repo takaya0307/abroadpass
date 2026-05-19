@@ -43,6 +43,13 @@ const articles = [
     desc: "カナダ・オーストラリア計2年の実体験をもとに、帰国後の就職活動のリアルを紹介。",
     href: "/career",
   },
+  {
+    emoji: "🧳",
+    tag: "準備・持ち物",
+    title: "ワーホリ出発前にやること・準備チェックリスト【経験者が教える】",
+    desc: "ビザ・保険・持ち物…出発前にやることを経験者がまとめ。「荷物は軽く」の理由も解説。",
+    href: "/waho-junbi",
+  },
 ];
 
 export default function ColumnPage() {
