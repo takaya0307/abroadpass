@@ -25,7 +25,7 @@ const worries = [
     emoji: "🤔",
     title: "そもそもエージェントって必要？",
     desc: "使わないと何が大変？費用は？疑問にまとめて答えます",
-    href: "/agent-hitsuyou",
+    href: "/best-3",
   },
 ];
 
@@ -121,20 +121,22 @@ export default function Home() {
           </SectionHeading>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {worries.map((w) => (
-              <Link
+              <div
                 key={w.title}
-                href={w.href}
-                className="flex items-start gap-4 p-6 rounded-2xl border border-border bg-soft hover:border-primary/30 hover:shadow-md transition-all group"
+                className="flex items-start gap-4 p-6 rounded-2xl border border-border bg-soft"
               >
                 <span className="text-3xl flex-shrink-0">{w.emoji}</span>
                 <div>
-                  <p className="font-bold text-foreground group-hover:text-primary transition-colors">
-                    {w.title}
-                  </p>
+                  <p className="font-bold text-foreground">{w.title}</p>
                   <p className="text-sm text-muted mt-1">{w.desc}</p>
                 </div>
-              </Link>
+              </div>
             ))}
+          </div>
+          <div className="text-center mt-8">
+            <CtaButton href="/best-3" variant="accent">
+              これらの不安をまとめて解決する →
+            </CtaButton>
           </div>
         </div>
       </section>
@@ -167,9 +169,12 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
-                <p className="text-xs font-bold text-accent bg-accent/10 rounded-full px-3 py-1 inline-block">
-                  {a.badge}
-                </p>
+                <div className="flex items-center justify-between mt-auto">
+                  <p className="text-xs font-bold text-accent bg-accent/10 rounded-full px-3 py-1 inline-block">
+                    {a.badge}
+                  </p>
+                  <span className="text-sm text-primary font-bold">口コミを見る →</span>
+                </div>
               </Link>
             ))}
           </div>
@@ -187,8 +192,15 @@ export default function Home() {
           <SectionHeading sub="留学・ワーホリの疑問をまとめて解決">
             お役立ち記事
           </SectionHeading>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {[
+              {
+                emoji: "🤔",
+                tag: "基礎知識",
+                title: "そもそも留学エージェントって必要？",
+                desc: "使わないと何が大変？費用は？メリット・デメリットをまとめて解説。",
+                href: "/agent-hitsuyou",
+              },
               {
                 emoji: "💰",
                 tag: "費用ガイド",
@@ -221,7 +233,8 @@ export default function Home() {
                 <p className="font-bold text-foreground group-hover:text-primary transition-colors mb-2 leading-snug">
                   {article.title}
                 </p>
-                <p className="text-sm text-muted mt-auto">{article.desc}</p>
+                <p className="text-sm text-muted mb-4">{article.desc}</p>
+                <span className="text-sm text-primary font-bold mt-auto">記事を読む →</span>
               </Link>
             ))}
           </div>
