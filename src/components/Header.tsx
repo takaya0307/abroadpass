@@ -5,6 +5,7 @@ import { useState } from "react";
 
 const navLinks = [
   { href: "/best-3", label: "おすすめ5選" },
+  { href: "/column", label: "コラム" },
 ];
 
 export function Header() {

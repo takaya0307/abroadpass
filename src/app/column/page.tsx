@@ -1,0 +1,88 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "コラム一覧 | Abroad Pass",
+  description:
+    "ワーホリ・留学に関するお役立ちコラム一覧。費用・英語力・エージェント選び・帰国後のキャリアまで、留学準備に役立つ情報をまとめています。",
+};
+
+const articles = [
+  {
+    emoji: "🤔",
+    tag: "基礎知識",
+    title: "そもそも留学エージェントって必要？",
+    desc: "使わないと何が大変？費用は？メリット・デメリットをまとめて解説。",
+    href: "/agent-hitsuyou",
+  },
+  {
+    emoji: "💰",
+    tag: "費用ガイド",
+    title: "ワーホリにかかる費用はいくら？国別まとめ",
+    desc: "オーストラリア・カナダなど5か国のリアルな費用を公開。節約術も解説。",
+    href: "/waho-cost",
+  },
+  {
+    emoji: "🗣",
+    tag: "英語・不安解消",
+    title: "英語力ゼロでもワーホリ・留学はできる？",
+    desc: "英語ゼロから渡航した人の体験談と、不安を解消する方法を紹介。",
+    href: "/eigo-zero",
+  },
+  {
+    emoji: "🔍",
+    tag: "エージェント選び",
+    title: "留学エージェントの選び方3つのポイント",
+    desc: "失敗しないために確認すべきポイントと目的別おすすめを紹介。",
+    href: "/agent-erabi",
+  },
+  {
+    emoji: "💼",
+    tag: "キャリア・就職",
+    title: "ワーホリ後の就職は不利？帰国後のキャリアをリアルに解説",
+    desc: "カナダ・オーストラリア計2年の実体験をもとに、帰国後の就職活動のリアルを紹介。",
+    href: "/career",
+  },
+];
+
+export default function ColumnPage() {
+  return (
+    <>
+      <section className="bg-gradient-to-br from-primary/5 via-white to-accent/5 py-14 md:py-20">
+        <div className="max-w-4xl mx-auto px-4">
+          <p className="text-primary font-bold text-sm mb-3 tracking-wide">お役立ちコラム</p>
+          <h1 className="text-2xl md:text-4xl font-black leading-tight mb-5">
+            留学・ワーホリの疑問を
+            <span className="text-primary">まとめて解決</span>
+          </h1>
+          <p className="text-muted text-base leading-relaxed max-w-2xl">
+            費用・英語力・エージェント選び・帰国後のキャリアまで、
+            留学準備で気になるテーマを徹底解説しています。
+          </p>
+        </div>
+      </section>
+
+      <section className="py-12 md:py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            {articles.map((article) => (
+              <Link
+                key={article.href}
+                href={article.href}
+                className="flex flex-col p-6 rounded-2xl border border-border bg-soft hover:border-primary/30 hover:shadow-md transition-all group"
+              >
+                <span className="text-3xl mb-3">{article.emoji}</span>
+                <span className="text-xs font-bold text-primary mb-2">{article.tag}</span>
+                <p className="font-bold text-foreground group-hover:text-primary transition-colors mb-2 leading-snug">
+                  {article.title}
+                </p>
+                <p className="text-sm text-muted mb-4">{article.desc}</p>
+                <span className="text-sm text-primary font-bold mt-auto">記事を読む →</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
