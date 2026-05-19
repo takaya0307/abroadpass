@@ -181,6 +181,53 @@ export default function Home() {
         </div>
       </section>
 
+      {/* お役立ち記事 */}
+      <section className="py-16 md:py-20 bg-white">
+        <div className="max-w-5xl mx-auto px-4">
+          <SectionHeading sub="留学・ワーホリの疑問をまとめて解決">
+            お役立ち記事
+          </SectionHeading>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+            {[
+              {
+                emoji: "💰",
+                tag: "費用ガイド",
+                title: "ワーホリにかかる費用はいくら？国別まとめ",
+                desc: "オーストラリア・カナダなど5か国のリアルな費用を公開。節約術も解説。",
+                href: "/waho-cost",
+              },
+              {
+                emoji: "🗣",
+                tag: "英語・不安解消",
+                title: "英語力ゼロでもワーホリ・留学はできる？",
+                desc: "英語ゼロから渡航した人の体験談と、不安を解消する方法を紹介。",
+                href: "/eigo-zero",
+              },
+              {
+                emoji: "🔍",
+                tag: "エージェント選び",
+                title: "留学エージェントの選び方3つのポイント",
+                desc: "失敗しないために確認すべきポイントと目的別おすすめを紹介。",
+                href: "/agent-erabi",
+              },
+            ].map((article) => (
+              <Link
+                key={article.title}
+                href={article.href}
+                className="flex flex-col p-6 rounded-2xl border border-border bg-soft hover:border-primary/30 hover:shadow-md transition-all group"
+              >
+                <span className="text-3xl mb-3">{article.emoji}</span>
+                <span className="text-xs font-bold text-primary mb-2">{article.tag}</span>
+                <p className="font-bold text-foreground group-hover:text-primary transition-colors mb-2 leading-snug">
+                  {article.title}
+                </p>
+                <p className="text-sm text-muted mt-auto">{article.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Steps */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4">
