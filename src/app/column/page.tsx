@@ -71,6 +71,13 @@ const articles = [
     desc: "語学留学の仕組み・種類・ビザ・費用・ワーホリとの違いをわかりやすく解説。短期・長期・社会人留学の選び方も。",
     href: "/ryugaku-towa",
   },
+  {
+    emoji: "👔",
+    tag: "社会人留学",
+    title: "社会人が留学するには？費用・期間・注意点まとめ",
+    desc: "有給・休職・退職の3パターンを徹底解説。費用・キャリアへの影響・注意点まで社会人目線でまとめました。",
+    href: "/shakaijin-ryugaku",
+  },
 ];
 
 export default function ColumnPage() {
