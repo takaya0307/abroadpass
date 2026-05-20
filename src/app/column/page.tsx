@@ -50,6 +50,13 @@ const articles = [
     desc: "ビザ・保険・持ち物…出発前にやることを経験者がまとめ。「荷物は軽く」の理由も解説。",
     href: "/waho-junbi",
   },
+  {
+    emoji: "🌍",
+    tag: "費用ガイド",
+    title: "語学留学にかかる費用はいくら？国別まとめ【2026年最新版】",
+    desc: "フィリピン・カナダ・オーストラリア・アイルランド・マルタの3ヶ月トータル費用を徹底比較。節約ポイントも解説。",
+    href: "/ryugaku-cost",
+  },
 ];
 
 export default function ColumnPage() {
