@@ -64,6 +64,13 @@ const articles = [
     desc: "ワーホリの仕組み・協定32カ国・年齢制限・費用・語学留学との違いを外務省情報をもとに正確に解説。",
     href: "/waho-towa",
   },
+  {
+    emoji: "📚",
+    tag: "基礎知識",
+    title: "語学留学とは？仕組み・期間・費用・ワーホリとの違いを徹底解説",
+    desc: "語学留学の仕組み・種類・ビザ・費用・ワーホリとの違いをわかりやすく解説。短期・長期・社会人留学の選び方も。",
+    href: "/ryugaku-towa",
+  },
 ];
 
 export default function ColumnPage() {
