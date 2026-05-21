@@ -3,6 +3,34 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { CtaButton } from "@/components/CtaButton";
 import Link from "next/link";
 
+const faqData = [
+  {
+    question: "ラストリゾートはワーホリ専門ですか？",
+    answer:
+      "ワーホリに特に強みを持つエージェントですが、語学留学にも対応しています。ワーホリを本格的に検討している方に向いているエージェントです。",
+  },
+  {
+    question: "サポート費用はかかりますか？",
+    answer:
+      "基本的なサポートは無料です。ただし語学学校や渡航手配にかかる実費は別途発生します。詳細は無料相談で確認できます。",
+  },
+  {
+    question: "現地でのサポートはありますか？",
+    answer:
+      "主要都市に現地オフィスがあり、日本人スタッフが常駐しています。渡航直後の生活立ち上げをサポートしてもらえます。",
+  },
+  {
+    question: "相談だけでも大丈夫ですか？",
+    answer:
+      "大丈夫です。資料ダウンロード→オンラインセミナー→カウンセリングと段階的に進められるので、いきなり面談という必要はありません。",
+  },
+  {
+    question: "どの国のワーホリに対応していますか？",
+    answer:
+      "複数のワーホリ協定国に対応しており、渡航先の都市選びからも相談できます。希望する国・都市について、無料相談で詳しく確認することをおすすめします。",
+  },
+];
+
 export const metadata: Metadata = {
   title: "ラストリゾートの評判・口コミ【2026年最新】ワーホリ特化エージェントの実態",
   description:
@@ -333,6 +361,65 @@ export default function LastResortPage() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="py-14 bg-soft">
+        <div className="max-w-4xl mx-auto px-4">
+          <SectionHeading tag="h2" sub="よくある質問">
+            ラストリゾート Q&amp;A
+          </SectionHeading>
+          <div className="space-y-4">
+            {faqData.map((item, i) => (
+              <div key={i} className="bg-white rounded-2xl p-6">
+                <p className="font-bold text-sm mb-2">Q. {item.question}</p>
+                <p className="text-sm text-foreground/80 leading-relaxed">A. {item.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 関連記事 */}
+      <section className="py-14 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <SectionHeading tag="h2" sub="あわせて読みたい">
+            関連記事
+          </SectionHeading>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {[
+              {
+                href: "/waho-towa",
+                title: "ワーキングホリデーとは？",
+                desc: "ワーホリの仕組み・対象年齢・協定国をわかりやすく解説。",
+              },
+              {
+                href: "/waho-cost",
+                title: "ワーホリにかかる費用まとめ",
+                desc: "国別・期間別の費用目安を徹底解説。",
+              },
+              {
+                href: "/agent-erabi",
+                title: "失敗しない留学エージェントの選び方",
+                desc: "自分に合ったエージェントを選ぶ5つのポイント。",
+              },
+              {
+                href: "/best-3",
+                title: "留学エージェントおすすめ比較",
+                desc: "主要5社を徹底比較。あなたに合うエージェントが見つかります。",
+              },
+            ].map((article) => (
+              <Link
+                key={article.href}
+                href={article.href}
+                className="block bg-soft rounded-2xl p-5 hover:shadow-md transition-shadow"
+              >
+                <p className="font-bold text-sm mb-1 text-primary">{article.title}</p>
+                <p className="text-xs text-muted leading-relaxed">{article.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* 他のエージェントとの比較 */}
       <section className="py-10 bg-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
@@ -383,6 +470,23 @@ export default function LastResortPage() {
               worstRating: "1",
               ratingCount: String(goodReviews.length + badReviews.length),
             },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqData.map((item) => ({
+              "@type": "Question",
+              name: item.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: item.answer,
+              },
+            })),
           }),
         }}
       />
