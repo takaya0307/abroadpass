@@ -3,6 +3,34 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { CtaButton } from "@/components/CtaButton";
 import Link from "next/link";
 
+const faqData = [
+  {
+    question: "スマ留の料金はなぜ安いのですか？",
+    answer:
+      "語学学校の空き場所や空き時間を活用するシェアリングエコノミーの仕組みにより、費用を抑えた留学プランを提供しています。国と期間でシンプルに料金が決まるため、予算が立てやすいのも特徴です。",
+  },
+  {
+    question: "LINEだけで全て手続きできますか？",
+    answer:
+      "相談・やり取りの多くはLINEで完結します。ビザ申請や学校手続きなど煩雑な手続きも代行してもらえます。",
+  },
+  {
+    question: "現地でのサポートはありますか？",
+    answer:
+      "基本的にオンライン・メール対応が中心です。現地にスタッフが常駐するタイプのエージェントとは異なるため、現地サポートを重視する方は事前に確認することをおすすめします。",
+  },
+  {
+    question: "短期留学（数週間）から対応していますか？",
+    answer:
+      "はい、1週間からの短期留学にも対応しています。長期のワーホリまで幅広く相談できます。",
+  },
+  {
+    question: "無料相談だけでも大丈夫ですか？",
+    answer:
+      "大丈夫です。相談しただけで申し込む義務は一切ありません。",
+  },
+];
+
 export const metadata: Metadata = {
   title: "スマ留の評判・口コミ【2026年最新】メリット・デメリットを徹底解説",
   description:
@@ -360,6 +388,65 @@ export default function SmaruPage() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="py-14 bg-soft">
+        <div className="max-w-4xl mx-auto px-4">
+          <SectionHeading tag="h2" sub="よくある質問">
+            スマ留 Q&amp;A
+          </SectionHeading>
+          <div className="space-y-4">
+            {faqData.map((item, i) => (
+              <div key={i} className="bg-white rounded-2xl p-6">
+                <p className="font-bold text-sm mb-2">Q. {item.question}</p>
+                <p className="text-sm text-foreground/80 leading-relaxed">A. {item.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 関連記事 */}
+      <section className="py-14 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <SectionHeading tag="h2" sub="あわせて読みたい">
+            関連記事
+          </SectionHeading>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {[
+              {
+                href: "/ryugaku-cost",
+                title: "語学留学の費用はいくらかかる？",
+                desc: "国別・期間別の費用目安を徹底まとめ。",
+              },
+              {
+                href: "/agent-erabi",
+                title: "失敗しない留学エージェントの選び方",
+                desc: "自分に合ったエージェントを選ぶ5つのポイント。",
+              },
+              {
+                href: "/eigo-zero",
+                title: "英語ゼロから留学できる？",
+                desc: "英語力に不安がある方へ。準備の仕方と現地での乗り越え方。",
+              },
+              {
+                href: "/best-3",
+                title: "留学エージェントおすすめ比較",
+                desc: "主要5社を徹底比較。あなたに合うエージェントが見つかります。",
+              },
+            ].map((article) => (
+              <Link
+                key={article.href}
+                href={article.href}
+                className="block bg-soft rounded-2xl p-5 hover:shadow-md transition-shadow"
+              >
+                <p className="font-bold text-sm mb-1 text-primary">{article.title}</p>
+                <p className="text-xs text-muted leading-relaxed">{article.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* 他のエージェントとの比較 */}
       <section className="py-10 bg-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
@@ -409,6 +496,23 @@ export default function SmaruPage() {
               worstRating: "1",
               ratingCount: String(goodReviews.length + badReviews.length),
             },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqData.map((item) => ({
+              "@type": "Question",
+              name: item.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: item.answer,
+              },
+            })),
           }),
         }}
       />

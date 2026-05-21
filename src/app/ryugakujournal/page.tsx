@@ -3,6 +3,34 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { CtaButton } from "@/components/CtaButton";
 import Link from "next/link";
 
+const faqData = [
+  {
+    question: "留学ジャーナルはどんな会社ですか？",
+    answer:
+      "1971年創業の老舗留学エージェントです。語学留学・ワーホリから大学正規留学まで幅広く対応しており、国別の専門カウンセラーが在籍しています。",
+  },
+  {
+    question: "24時間サポートとはどんな内容ですか？",
+    answer:
+      "渡航後も24時間対応の電話サポートがあり、現地でトラブルが起きた際に日本語で相談できます。特に初めての留学で安心感を求める方に評価されています。",
+  },
+  {
+    question: "費用は高いですか？",
+    answer:
+      "業界平均と比べるとやや高めです。追加オプションで予算オーバーになるケースもあるため、相談時に総額をしっかり確認することをおすすめします。",
+  },
+  {
+    question: "ワーキングホリデーにも対応していますか？",
+    answer:
+      "はい、対応しています。語学留学・ワーホリから大学正規留学まで幅広く相談できます。",
+  },
+  {
+    question: "無料相談だけでも大丈夫ですか？",
+    answer:
+      "大丈夫です。相談しただけで申し込む義務は一切ありません。費用感やプランの詳細を直接確認してみましょう。",
+  },
+];
+
 export const metadata: Metadata = {
   title: "留学ジャーナルの評判・口コミ【2026年最新】50年超の老舗エージェントの実態",
   description:
@@ -283,6 +311,65 @@ export default function RyugakuJournalPage() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="py-14 bg-soft">
+        <div className="max-w-4xl mx-auto px-4">
+          <SectionHeading tag="h2" sub="よくある質問">
+            留学ジャーナル Q&amp;A
+          </SectionHeading>
+          <div className="space-y-4">
+            {faqData.map((item, i) => (
+              <div key={i} className="bg-white rounded-2xl p-6">
+                <p className="font-bold text-sm mb-2">Q. {item.question}</p>
+                <p className="text-sm text-foreground/80 leading-relaxed">A. {item.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 関連記事 */}
+      <section className="py-14 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <SectionHeading tag="h2" sub="あわせて読みたい">
+            関連記事
+          </SectionHeading>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {[
+              {
+                href: "/agent-hitsuyou",
+                title: "留学エージェントは本当に必要？",
+                desc: "エージェントを使うメリット・デメリットをフラットに解説。",
+              },
+              {
+                href: "/ryugaku-cost",
+                title: "語学留学の費用はいくらかかる？",
+                desc: "国別・期間別の費用目安を徹底まとめ。",
+              },
+              {
+                href: "/agent-erabi",
+                title: "失敗しない留学エージェントの選び方",
+                desc: "自分に合ったエージェントを選ぶ5つのポイント。",
+              },
+              {
+                href: "/best-3",
+                title: "留学エージェントおすすめ比較",
+                desc: "主要5社を徹底比較。あなたに合うエージェントが見つかります。",
+              },
+            ].map((article) => (
+              <Link
+                key={article.href}
+                href={article.href}
+                className="block bg-soft rounded-2xl p-5 hover:shadow-md transition-shadow"
+              >
+                <p className="font-bold text-sm mb-1 text-primary">{article.title}</p>
+                <p className="text-xs text-muted leading-relaxed">{article.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* 他のエージェントとの比較 */}
       <section className="py-10 bg-soft">
         <div className="max-w-4xl mx-auto px-4 text-center">
@@ -333,6 +420,23 @@ export default function RyugakuJournalPage() {
               worstRating: "1",
               ratingCount: String(reviews.length),
             },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqData.map((item) => ({
+              "@type": "Question",
+              name: item.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: item.answer,
+              },
+            })),
           }),
         }}
       />
