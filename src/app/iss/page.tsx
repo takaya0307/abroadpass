@@ -3,6 +3,34 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { CtaButton } from "@/components/CtaButton";
 import Link from "next/link";
 
+const faqData = [
+  {
+    question: "ISS留学ライフはどんな会社ですか？",
+    answer:
+      "Z会グループが運営する留学エージェントです。1990年の創立以来、10万人以上の留学をサポートしてきた実績があります。語学留学・ワーキングホリデーから大学正規留学まで幅広く対応しています。",
+  },
+  {
+    question: "ISS留学ライフの費用は高いですか？",
+    answer:
+      "業界平均と比べるとやや高めです。ただし現地スタッフによるサポートや空港送迎など、サービスの手厚さを考慮すると納得感があるという声も多くあります。費用の詳細は無料相談で確認できます。",
+  },
+  {
+    question: "現地ではどんなサポートを受けられますか？",
+    answer:
+      "空港送迎・携帯契約・銀行口座開設のサポートなど、現地生活のスタートを手厚くフォローしてくれます。現地スタッフが常駐しており、トラブル時にも対応してもらえます。",
+  },
+  {
+    question: "ワーキングホリデーにも対応していますか？",
+    answer:
+      "はい、対応しています。語学留学だけでなくワーホリ・社会人のキャリアアップ留学・帰国後の就職サポートまで一貫して相談できます。",
+  },
+  {
+    question: "無料相談だけでも大丈夫ですか？",
+    answer:
+      "大丈夫です。相談しただけで申し込む義務は一切なく、費用感や渡航先の候補など気になることを気軽に確認できます。",
+  },
+];
+
 export const metadata: Metadata = {
   title: "ISS留学ライフの評判・口コミ【2026年最新】Z会グループの信頼性を検証",
   description:
@@ -96,7 +124,8 @@ export default function IssPage() {
           </SectionHeading>
           <div className="bg-soft rounded-2xl p-6 text-sm leading-relaxed space-y-3 text-foreground/80">
             <p>
-              ISS留学ライフは、Z会グループが運営する50年以上の歴史を持つ老舗の留学エージェントです。
+              ISS留学ライフは、Z会グループが運営する1990年創立の留学エージェントです。
+              これまでに10万人以上の留学をサポートしてきた実績を持ち、
               語学留学・ワーキングホリデーはもちろん、社会人のキャリアアップ留学や大学正規留学にも強く、
               帰国後の就職サポートまで一貫して対応しています。
             </p>
@@ -108,7 +137,7 @@ export default function IssPage() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
               {[
                 { label: "運営", value: "Z会グループ" },
-                { label: "歴史", value: "50年以上" },
+                { label: "創立", value: "1990年" },
                 { label: "特徴", value: "現地サポート充実" },
                 { label: "対象", value: "語学・ワーホリ・正規留学" },
               ].map((item) => (
@@ -272,6 +301,65 @@ export default function IssPage() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="py-14 bg-soft">
+        <div className="max-w-4xl mx-auto px-4">
+          <SectionHeading tag="h2" sub="よくある質問">
+            ISS留学ライフ Q&amp;A
+          </SectionHeading>
+          <div className="space-y-4">
+            {faqData.map((item, i) => (
+              <div key={i} className="bg-white rounded-2xl p-6">
+                <p className="font-bold text-sm mb-2">Q. {item.question}</p>
+                <p className="text-sm text-foreground/80 leading-relaxed">A. {item.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 関連記事 */}
+      <section className="py-14 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <SectionHeading tag="h2" sub="あわせて読みたい">
+            関連記事
+          </SectionHeading>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {[
+              {
+                href: "/agent-hitsuyou",
+                title: "留学エージェントは本当に必要？",
+                desc: "エージェントを使うメリット・デメリットをフラットに解説。",
+              },
+              {
+                href: "/agent-erabi",
+                title: "失敗しない留学エージェントの選び方",
+                desc: "自分に合ったエージェントを選ぶ5つのポイント。",
+              },
+              {
+                href: "/ryugaku-cost",
+                title: "語学留学の費用はいくらかかる？",
+                desc: "国・期間別の費用目安を徹底まとめ。",
+              },
+              {
+                href: "/best-3",
+                title: "留学エージェントおすすめ比較",
+                desc: "主要5社を徹底比較。あなたに合うエージェントが見つかります。",
+              },
+            ].map((article) => (
+              <Link
+                key={article.href}
+                href={article.href}
+                className="block bg-soft rounded-2xl p-5 hover:shadow-md transition-shadow"
+              >
+                <p className="font-bold text-sm mb-1 text-primary">{article.title}</p>
+                <p className="text-xs text-muted leading-relaxed">{article.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* 他のエージェントとの比較 */}
       <section className="py-10 bg-soft">
         <div className="max-w-4xl mx-auto px-4 text-center">
@@ -314,7 +402,7 @@ export default function IssPage() {
             "@context": "https://schema.org",
             "@type": "Product",
             name: "ISS留学ライフ",
-            description: "Z会グループが運営する50年以上の歴史を持つ老舗留学エージェント。現地スタッフによる手厚いサポートが特徴。",
+            description: "Z会グループが運営する1990年創立の老舗留学エージェント。10万人以上のサポート実績。現地スタッフによる手厚いサポートが特徴。",
             aggregateRating: {
               "@type": "AggregateRating",
               ratingValue: "4.5",
@@ -322,6 +410,23 @@ export default function IssPage() {
               worstRating: "1",
               ratingCount: String(reviews.length),
             },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqData.map((item) => ({
+              "@type": "Question",
+              name: item.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: item.answer,
+              },
+            })),
           }),
         }}
       />
