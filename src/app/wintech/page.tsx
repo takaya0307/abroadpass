@@ -3,6 +3,34 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { CtaButton } from "@/components/CtaButton";
 import Link from "next/link";
 
+const faqData = [
+  {
+    question: "ウインテック留学センターの特徴は何ですか？",
+    answer:
+      "既製のパッケージではなく、一人ひとりの希望・予算・目的に合わせた完全オーダーメイドのプランを設計してくれるエージェントです。カウンセラーによる丁寧なヒアリングが特徴です。",
+  },
+  {
+    question: "渡航前のサポートはどんな内容ですか？",
+    answer:
+      "ビザ手続き・語学学校の手配に加え、渡航前の英語レッスンも受けられます。オリエンテーションで海外生活の基礎情報も提供してくれます。",
+  },
+  {
+    question: "現地（海外）でのサポートはありますか？",
+    answer:
+      "渡航先によってサポート内容が異なります。現地オフィスを持たない国もあるため、相談の際に渡航先のサポート体制を確認することをおすすめします。",
+  },
+  {
+    question: "語学留学とワーホリ、両方対応していますか？",
+    answer:
+      "はい、どちらも対応しています。目的や予算に合わせてプランを一から提案してもらえます。",
+  },
+  {
+    question: "無料相談だけでも大丈夫ですか？",
+    answer:
+      "大丈夫です。相談しただけで申し込む義務は一切ありません。費用感やプランの詳細など、気になることを直接確認してみましょう。",
+  },
+];
+
 export const metadata: Metadata = {
   title: "ウインテック留学センターの評判・口コミ【2026年最新】オーダーメイド留学の実態",
   description:
@@ -268,6 +296,65 @@ export default function WintechPage() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="py-14 bg-soft">
+        <div className="max-w-4xl mx-auto px-4">
+          <SectionHeading tag="h2" sub="よくある質問">
+            ウインテック留学センター Q&amp;A
+          </SectionHeading>
+          <div className="space-y-4">
+            {faqData.map((item, i) => (
+              <div key={i} className="bg-white rounded-2xl p-6">
+                <p className="font-bold text-sm mb-2">Q. {item.question}</p>
+                <p className="text-sm text-foreground/80 leading-relaxed">A. {item.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 関連記事 */}
+      <section className="py-14 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <SectionHeading tag="h2" sub="あわせて読みたい">
+            関連記事
+          </SectionHeading>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {[
+              {
+                href: "/agent-hitsuyou",
+                title: "留学エージェントは本当に必要？",
+                desc: "エージェントを使うメリット・デメリットをフラットに解説。",
+              },
+              {
+                href: "/agent-erabi",
+                title: "失敗しない留学エージェントの選び方",
+                desc: "自分に合ったエージェントを選ぶ5つのポイント。",
+              },
+              {
+                href: "/ryugaku-cost",
+                title: "語学留学の費用はいくらかかる？",
+                desc: "国別・期間別の費用目安を徹底まとめ。",
+              },
+              {
+                href: "/best-3",
+                title: "留学エージェントおすすめ比較",
+                desc: "主要5社を徹底比較。あなたに合うエージェントが見つかります。",
+              },
+            ].map((article) => (
+              <Link
+                key={article.href}
+                href={article.href}
+                className="block bg-soft rounded-2xl p-5 hover:shadow-md transition-shadow"
+              >
+                <p className="font-bold text-sm mb-1 text-primary">{article.title}</p>
+                <p className="text-xs text-muted leading-relaxed">{article.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* 他のエージェントとの比較 */}
       <section className="py-10 bg-soft">
         <div className="max-w-4xl mx-auto px-4 text-center">
@@ -318,6 +405,23 @@ export default function WintechPage() {
               worstRating: "1",
               ratingCount: String(reviews.length),
             },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqData.map((item) => ({
+              "@type": "Question",
+              name: item.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: item.answer,
+              },
+            })),
           }),
         }}
       />
