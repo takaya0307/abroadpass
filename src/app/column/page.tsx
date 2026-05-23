@@ -78,6 +78,13 @@ const articles = [
     desc: "有給・休職・退職の3パターンを徹底解説。費用・キャリアへの影響・注意点まで社会人目線でまとめました。",
     href: "/shakaijin-ryugaku",
   },
+  {
+    emoji: "💡",
+    tag: "基礎知識",
+    title: "留学エージェントはなぜ無料？仕組みをわかりやすく解説",
+    desc: "「無料なのに大丈夫？」という疑問に答えます。語学学校との収益モデル・注意点・直接申し込みとの費用比較を正直に解説。",
+    href: "/agent-muryou",
+  },
 ];
 
 export default function ColumnPage() {
