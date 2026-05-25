@@ -127,6 +127,13 @@ const articles = [
     desc: "1ヶ月30〜40万円の費用目安、オークランド・クライストチャーチの違い、治安・自然・NZ留学が向いている人を解説。",
     href: "/ryugaku-newzealand",
   },
+  {
+    emoji: "🇬🇧",
+    tag: "語学留学",
+    title: "イギリス語学留学の費用・特徴まとめ【2026年最新】ロンドン・マンチェスター・ブライトン比較",
+    desc: "英語の発祥地でブリティッシュイングリッシュを学ぶ。1ヶ月45〜70万円の費用目安と主要4都市の違い、ビザの種類も解説。",
+    href: "/ryugaku-uk",
+  },
 ];
 
 export default function ColumnPage() {
