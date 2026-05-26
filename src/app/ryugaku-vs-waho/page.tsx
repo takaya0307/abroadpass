@@ -429,22 +429,33 @@ export default function RyugakuVsWahoPage() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* エージェント別おすすめ */}
       <section className="py-12 md:py-16 bg-white">
         <div className="max-w-3xl mx-auto px-4">
-          <h2 className="text-xl md:text-2xl font-black mb-2">
-            まずはエージェントに相談してみよう
-          </h2>
+          <h2 className="text-xl md:text-2xl font-black mb-2">まずはエージェントに相談してみよう</h2>
           <p className="text-muted text-sm mb-6">
-            「語学留学かワーホリか」は、あなたの年齢・英語力・期間・予算によって最適解が変わります。
-            無料で相談できる留学エージェントを活用して、自分に合ったプランを一緒に考えてもらいましょう。
+            「語学留学かワーホリか」は年齢・英語力・期間・予算によって最適解が変わります。目的別に選んでみましょう。
           </p>
-          <Link
-            href="/best-3"
-            className="inline-flex items-center gap-2 bg-primary text-white font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-colors"
-          >
-            おすすめ留学エージェントを比較する →
-          </Link>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+            <Link href="/smaru" className="bg-soft rounded-2xl p-5 hover:shadow-md transition-shadow border border-border hover:border-primary/30 group">
+              <p className="text-xs font-bold text-primary mb-1">💰 コスパ重視</p>
+              <p className="font-bold text-sm mb-2 group-hover:text-primary transition-colors">スマ留</p>
+              <p className="text-xs text-muted leading-relaxed">業界最安値保証。語学留学・ワーホリ両対応。費用を抑えたい方に。</p>
+            </Link>
+            <Link href="/iss" className="bg-soft rounded-2xl p-5 hover:shadow-md transition-shadow border border-border hover:border-primary/30 group">
+              <p className="text-xs font-bold text-primary mb-1">🛡️ サポート重視</p>
+              <p className="font-bold text-sm mb-2 group-hover:text-primary transition-colors">ISS留学ライフ</p>
+              <p className="text-xs text-muted leading-relaxed">創業50年以上の老舗。留学・ワーホリ含め幅広くサポート。</p>
+            </Link>
+            <Link href="/lastresort" className="bg-soft rounded-2xl p-5 hover:shadow-md transition-shadow border border-border hover:border-primary/30 group">
+              <p className="text-xs font-bold text-primary mb-1">✈️ ワーホリ特化</p>
+              <p className="font-bold text-sm mb-2 group-hover:text-primary transition-colors">ラストリゾート</p>
+              <p className="text-xs text-muted leading-relaxed">ワーキングホリデー専門。現地就労や長期滞在サポートに強み。</p>
+            </Link>
+          </div>
+          <p className="text-center text-sm text-muted">
+            全社を比較したい方は → <Link href="/best-3" className="text-primary font-bold hover:underline">おすすめエージェント比較ページ</Link>
+          </p>
         </div>
       </section>
 

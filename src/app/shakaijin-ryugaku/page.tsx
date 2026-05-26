@@ -419,22 +419,35 @@ export default function ShakaijinRyugakuPage() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* エージェント別おすすめ */}
       <section className="py-12 md:py-16 bg-primary/5">
-        <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="text-xl md:text-2xl font-black mb-4">
+        <div className="max-w-3xl mx-auto px-4">
+          <h2 className="text-xl md:text-2xl font-black mb-2 text-center">
             社会人留学を<span className="text-primary">一緒に考えよう</span>
           </h2>
-          <p className="text-muted text-sm mb-6 leading-relaxed">
-            「どのパターンが自分に合うか」「どの国がいいか」——まずはエージェントに相談するだけでも大きな一歩です。
-            無料相談から始めてみましょう。
+          <p className="text-muted text-sm mb-6 leading-relaxed text-center">
+            「どのパターンが自分に合うか」「どの国がいいか」——目的に合わせてエージェントを選んでみましょう。
           </p>
-          <Link
-            href="/best-3"
-            className="inline-block bg-primary text-white font-bold px-8 py-4 rounded-full hover:bg-primary/90 transition-colors text-base"
-          >
-            おすすめエージェントを見る →
-          </Link>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+            <Link href="/smaru" className="bg-white rounded-2xl p-5 hover:shadow-md transition-shadow border border-border hover:border-primary/30 group">
+              <p className="text-xs font-bold text-primary mb-1">💰 コスパ重視</p>
+              <p className="font-bold text-sm mb-2 group-hover:text-primary transition-colors">スマ留</p>
+              <p className="text-xs text-muted leading-relaxed">業界最安値保証。有給・休職期間を最大限活用したい方に。</p>
+            </Link>
+            <Link href="/ryugakujournal" className="bg-white rounded-2xl p-5 hover:shadow-md transition-shadow border border-border hover:border-primary/30 group">
+              <p className="text-xs font-bold text-primary mb-1">👔 社会人・長期向け</p>
+              <p className="font-bold text-sm mb-2 group-hover:text-primary transition-colors">留学ジャーナル</p>
+              <p className="text-xs text-muted leading-relaxed">40年以上の実績。社会人留学の豊富な実績と長期プランに対応。</p>
+            </Link>
+            <Link href="/iss" className="bg-white rounded-2xl p-5 hover:shadow-md transition-shadow border border-border hover:border-primary/30 group">
+              <p className="text-xs font-bold text-primary mb-1">🛡️ サポート重視</p>
+              <p className="font-bold text-sm mb-2 group-hover:text-primary transition-colors">ISS留学ライフ</p>
+              <p className="text-xs text-muted leading-relaxed">創業50年以上の老舗。忙しい社会人でも安心の手厚いサポート。</p>
+            </Link>
+          </div>
+          <p className="text-center text-sm text-muted">
+            全社を比較したい方は → <Link href="/best-3" className="text-primary font-bold hover:underline">おすすめエージェント比較ページ</Link>
+          </p>
         </div>
       </section>
     </>

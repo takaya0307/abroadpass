@@ -298,10 +298,27 @@ export default function WahoCountryPage() {
               一人で情報を集めるのが大変な場合は、無料で相談できる留学エージェントを活用するのも一つの方法です。
             </p>
           </div>
-          <div className="mt-6 text-center">
-            <CtaButton href="/best-3" variant="primary">
-              おすすめエージェント5社を比較する
-            </CtaButton>
+          <div className="mt-8">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
+              <Link href="/smaru" className="bg-soft rounded-2xl p-5 hover:shadow-md transition-shadow border border-border hover:border-primary/30 group">
+                <p className="text-xs font-bold text-primary mb-1">💰 コスパ重視</p>
+                <p className="font-bold text-sm mb-2 group-hover:text-primary transition-colors">スマ留</p>
+                <p className="text-xs text-muted leading-relaxed">業界最安値保証。ワーホリの費用を抑えたい方に。</p>
+              </Link>
+              <Link href="/lastresort" className="bg-soft rounded-2xl p-5 hover:shadow-md transition-shadow border border-border hover:border-primary/30 group">
+                <p className="text-xs font-bold text-primary mb-1">✈️ ワーホリ特化</p>
+                <p className="font-bold text-sm mb-2 group-hover:text-primary transition-colors">ラストリゾート</p>
+                <p className="text-xs text-muted leading-relaxed">ワーキングホリデー専門。現地就労・国別の詳細情報に強み。</p>
+              </Link>
+              <Link href="/iss" className="bg-soft rounded-2xl p-5 hover:shadow-md transition-shadow border border-border hover:border-primary/30 group">
+                <p className="text-xs font-bold text-primary mb-1">🛡️ サポート重視</p>
+                <p className="font-bold text-sm mb-2 group-hover:text-primary transition-colors">ISS留学ライフ</p>
+                <p className="text-xs text-muted leading-relaxed">創業50年以上の老舗。国選びから渡航まで手厚くサポート。</p>
+              </Link>
+            </div>
+            <p className="text-center text-sm text-muted">
+              全社を比較したい方は → <Link href="/best-3" className="text-primary font-bold hover:underline">おすすめエージェント比較ページ</Link>
+            </p>
           </div>
         </div>
       </section>

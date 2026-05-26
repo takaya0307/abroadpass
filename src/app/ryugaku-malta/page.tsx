@@ -348,25 +348,32 @@ export default function RyugakuMaltaPage() {
         </div>
       </section>
 
-      {/* エージェント案内 */}
+      {/* エージェント別おすすめ */}
       <section className="py-12 md:py-16 bg-soft">
         <div className="max-w-3xl mx-auto px-4">
-          <h2 className="text-xl md:text-2xl font-black mb-2">
-            マルタ留学対応のエージェントを探す
-          </h2>
+          <h2 className="text-xl md:text-2xl font-black mb-2">マルタ留学におすすめのエージェント</h2>
           <p className="text-muted text-sm mb-6">
-            紹介している5社すべてがマルタの語学留学に対応しています。
-            航空券の経由便手配や現地サポートも含め、エージェントを通じて準備するのがスムーズです。
+            マルタは経由便が必要なため、エージェントを通じた総合サポートが特に役立ちます。
           </p>
-          <Link
-            href="/best-3"
-            className="inline-flex items-center gap-2 bg-primary text-white font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-colors"
-          >
-            おすすめ留学エージェントを比較する →
-          </Link>
-          <p className="text-xs text-muted mt-3">
-            ※ スマ留はマルタに自社専用学生寮（SMARYU RESIDENCE）を保有しており、
-            ホームステイが不足しがちなダブリン等とは異なり、安定した滞在先を確保しやすいです。
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+            <Link href="/smaru" className="bg-white rounded-2xl p-5 hover:shadow-md transition-shadow border border-border hover:border-primary/30 group">
+              <p className="text-xs font-bold text-primary mb-1">🏠 マルタ特化</p>
+              <p className="font-bold text-sm mb-2 group-hover:text-primary transition-colors">スマ留</p>
+              <p className="text-xs text-muted leading-relaxed">マルタに自社専用学生寮（SMARYU RESIDENCE）を保有。安定した滞在先と最安値保証。</p>
+            </Link>
+            <Link href="/iss" className="bg-white rounded-2xl p-5 hover:shadow-md transition-shadow border border-border hover:border-primary/30 group">
+              <p className="text-xs font-bold text-primary mb-1">🛡️ サポート重視</p>
+              <p className="font-bold text-sm mb-2 group-hover:text-primary transition-colors">ISS留学ライフ</p>
+              <p className="text-xs text-muted leading-relaxed">創業50年以上の老舗。渡航前から現地まで手厚いサポートで安心。</p>
+            </Link>
+            <Link href="/ryugakujournal" className="bg-white rounded-2xl p-5 hover:shadow-md transition-shadow border border-border hover:border-primary/30 group">
+              <p className="text-xs font-bold text-primary mb-1">👔 実績・社会人向け</p>
+              <p className="font-bold text-sm mb-2 group-hover:text-primary transition-colors">留学ジャーナル</p>
+              <p className="text-xs text-muted leading-relaxed">40年以上の実績。欧州留学の豊富なノウハウで安心して任せられる。</p>
+            </Link>
+          </div>
+          <p className="text-center text-sm text-muted">
+            全社を比較したい方は → <Link href="/best-3" className="text-primary font-bold hover:underline">おすすめエージェント比較ページ</Link>
           </p>
         </div>
       </section>

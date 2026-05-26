@@ -337,24 +337,32 @@ export default function RyugakuIrelandPage() {
         </div>
       </section>
 
-      {/* エージェント案内 */}
+      {/* エージェント別おすすめ */}
       <section className="py-12 md:py-16 bg-soft">
         <div className="max-w-3xl mx-auto px-4">
-          <h2 className="text-xl md:text-2xl font-black mb-2">
-            アイルランド留学対応のエージェントを探す
-          </h2>
+          <h2 className="text-xl md:text-2xl font-black mb-2">アイルランド留学におすすめのエージェント</h2>
           <p className="text-muted text-sm mb-6">
-            紹介している5社すべてがアイルランドの語学留学に対応しています。
-            ダブリンの学校選びやホームステイの手配など、エージェントを通じてスムーズに準備できます。
+            ダブリンはホームステイの競争率が高めです。早めにエージェントに相談して滞在先を確保しましょう。
           </p>
-          <Link
-            href="/best-3"
-            className="inline-flex items-center gap-2 bg-primary text-white font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-colors"
-          >
-            おすすめ留学エージェントを比較する →
-          </Link>
-          <p className="text-xs text-muted mt-3">
-            ※ ダブリンはホームステイの競争率が高いため、早めのエージェント相談をおすすめします。
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+            <Link href="/smaru" className="bg-white rounded-2xl p-5 hover:shadow-md transition-shadow border border-border hover:border-primary/30 group">
+              <p className="text-xs font-bold text-primary mb-1">💰 コスパ重視</p>
+              <p className="font-bold text-sm mb-2 group-hover:text-primary transition-colors">スマ留</p>
+              <p className="text-xs text-muted leading-relaxed">業界最安値保証。費用を抑えながら留学したい方に。</p>
+            </Link>
+            <Link href="/iss" className="bg-white rounded-2xl p-5 hover:shadow-md transition-shadow border border-border hover:border-primary/30 group">
+              <p className="text-xs font-bold text-primary mb-1">🛡️ サポート重視</p>
+              <p className="font-bold text-sm mb-2 group-hover:text-primary transition-colors">ISS留学ライフ</p>
+              <p className="text-xs text-muted leading-relaxed">創業50年以上の老舗。ホームステイ手配も含め安心のサポート。</p>
+            </Link>
+            <Link href="/ryugakujournal" className="bg-white rounded-2xl p-5 hover:shadow-md transition-shadow border border-border hover:border-primary/30 group">
+              <p className="text-xs font-bold text-primary mb-1">👔 実績・社会人向け</p>
+              <p className="font-bold text-sm mb-2 group-hover:text-primary transition-colors">留学ジャーナル</p>
+              <p className="text-xs text-muted leading-relaxed">40年以上の実績。社会人留学やワーホリとの組み合わせにも対応。</p>
+            </Link>
+          </div>
+          <p className="text-center text-sm text-muted">
+            全社を比較したい方は → <Link href="/best-3" className="text-primary font-bold hover:underline">おすすめエージェント比較ページ</Link>
           </p>
         </div>
       </section>

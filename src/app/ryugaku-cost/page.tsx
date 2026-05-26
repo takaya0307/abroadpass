@@ -306,6 +306,35 @@ export default function RyugakuCostPage() {
         </div>
       </section>
 
+      {/* エージェント別おすすめ */}
+      <section className="py-12 md:py-16 bg-soft">
+        <div className="max-w-4xl mx-auto px-4">
+          <SectionHeading tag="h2" sub="目的別に選ぼう">
+            費用を相談できるおすすめエージェント
+          </SectionHeading>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+            <Link href="/smaru" className="bg-white rounded-2xl p-5 hover:shadow-md transition-shadow border border-border hover:border-primary/30 group">
+              <p className="text-xs font-bold text-primary mb-1">💰 コスパ重視</p>
+              <p className="font-bold text-sm mb-2 group-hover:text-primary transition-colors">スマ留</p>
+              <p className="text-xs text-muted leading-relaxed">業界最安値保証。同じ学校・期間なら他社より高ければ差額返金。費用を抑えたい方に。</p>
+            </Link>
+            <Link href="/iss" className="bg-white rounded-2xl p-5 hover:shadow-md transition-shadow border border-border hover:border-primary/30 group">
+              <p className="text-xs font-bold text-primary mb-1">🛡️ サポート重視</p>
+              <p className="font-bold text-sm mb-2 group-hover:text-primary transition-colors">ISS留学ライフ</p>
+              <p className="text-xs text-muted leading-relaxed">創業50年以上の老舗。費用相談から渡航まで丁寧にサポートしてくれる。</p>
+            </Link>
+            <Link href="/ryugakujournal" className="bg-white rounded-2xl p-5 hover:shadow-md transition-shadow border border-border hover:border-primary/30 group">
+              <p className="text-xs font-bold text-primary mb-1">👔 実績・社会人向け</p>
+              <p className="font-bold text-sm mb-2 group-hover:text-primary transition-colors">留学ジャーナル</p>
+              <p className="text-xs text-muted leading-relaxed">40年以上の実績。多彩な国・学校から自分に合ったプランを提案してもらえる。</p>
+            </Link>
+          </div>
+          <p className="text-center text-sm text-muted">
+            全社を比較したい方は → <Link href="/best-3" className="text-primary font-bold hover:underline">おすすめエージェント比較ページ</Link>
+          </p>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-12 md:py-16 bg-gradient-to-r from-primary to-primary-dark text-white text-center">
         <div className="max-w-3xl mx-auto px-4">
