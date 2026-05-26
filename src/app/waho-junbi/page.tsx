@@ -301,6 +301,26 @@ export default function WahoJunbiPage() {
         </div>
       </section>
 
+      {/* 関連記事 */}
+      <section className="py-12 bg-soft">
+        <div className="max-w-4xl mx-auto px-4">
+          <p className="font-bold text-foreground mb-5">あわせて読みたい</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {[
+              { href: "/waho-towa", title: "ワーホリとは？仕組みから費用・メリット・デメリットまで", desc: "ワーキングホリデーの基本情報をまるごと解説。協定32カ国・年齢制限も。" },
+              { href: "/waho-cost", title: "ワーホリにかかる費用はいくら？国別まとめ", desc: "オーストラリア・カナダなど5カ国のリアルな費用を公開。節約術も解説。" },
+              { href: "/waho-country", title: "ワーホリおすすめ国ランキング【英語圏5カ国を比較】", desc: "国の選び方に迷ったら。目的別のおすすめ国を徹底比較。" },
+              { href: "/waho-demerits", title: "ワーホリはやめた方がいい？デメリットと後悔しない判断基準", desc: "デメリットを正直に解説。向いている人・向いていない人の判断基準も。" },
+            ].map((a) => (
+              <Link key={a.href} href={a.href} className="block bg-white rounded-2xl p-5 hover:shadow-md transition-shadow border border-border hover:border-primary/30">
+                <p className="font-bold text-sm text-primary mb-1">{a.title}</p>
+                <p className="text-xs text-muted leading-relaxed">{a.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="py-12 md:py-16 bg-gradient-to-r from-primary to-primary-dark text-white">
         <div className="max-w-3xl mx-auto px-4 text-center">

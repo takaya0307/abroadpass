@@ -309,6 +309,26 @@ export default function AgentHitsuyouPage() {
         </div>
       </section>
 
+      {/* 関連記事 */}
+      <section className="py-12 bg-soft">
+        <div className="max-w-4xl mx-auto px-4">
+          <p className="font-bold text-foreground mb-5">あわせて読みたい</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {[
+              { href: "/agent-muryou", title: "留学エージェントはなぜ無料？仕組みをわかりやすく解説", desc: "「無料なのに大丈夫？」という疑問に答えます。収益モデルと注意点を正直に解説。" },
+              { href: "/agent-erabi", title: "留学エージェントの選び方3つのポイント", desc: "失敗しないために確認すべきポイントと目的別おすすめを紹介。" },
+              { href: "/ryugaku-towa", title: "語学留学とは？仕組み・期間・費用を徹底解説", desc: "語学留学の基本をわかりやすくまとめました。" },
+              { href: "/waho-towa", title: "ワーホリとは？仕組みから費用・メリット・デメリットまで", desc: "ワーキングホリデーの基本情報を外務省情報をもとに正確に解説。" },
+            ].map((a) => (
+              <Link key={a.href} href={a.href} className="block bg-white rounded-2xl p-5 hover:shadow-md transition-shadow border border-border hover:border-primary/30">
+                <p className="font-bold text-sm text-primary mb-1">{a.title}</p>
+                <p className="text-xs text-muted leading-relaxed">{a.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="py-16 bg-gradient-to-r from-primary to-primary-dark text-white text-center">
         <div className="max-w-3xl mx-auto px-4">

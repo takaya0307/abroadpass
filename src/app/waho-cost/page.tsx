@@ -314,6 +314,26 @@ export default function WahoCostPage() {
         </div>
       </section>
 
+      {/* 関連記事 */}
+      <section className="py-12 bg-soft">
+        <div className="max-w-4xl mx-auto px-4">
+          <p className="font-bold text-foreground mb-5">あわせて読みたい</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {[
+              { href: "/ryugaku-cost", title: "語学留学にかかる費用はいくら？国別まとめ【2026年版】", desc: "フィリピン・カナダ・オーストラリアなど5カ国のトータル費用を比較。節約ポイントも解説。" },
+              { href: "/ryugaku-vs-waho", title: "語学留学 vs ワーホリ どちらがいい？目的別に徹底比較", desc: "費用・英語力・就職など7つの観点で徹底比較。あなたの目的に合った選び方を解説。" },
+              { href: "/waho-country", title: "ワーホリおすすめ国ランキング【英語圏5カ国を比較】", desc: "オーストラリア・カナダ・ニュージーランドなど5カ国を目的別に比較。" },
+              { href: "/waho-towa", title: "ワーホリとは？仕組みから費用・メリット・デメリットまで", desc: "ワーキングホリデーの基本をまるごと解説。協定32カ国・年齢制限も。" },
+            ].map((a) => (
+              <Link key={a.href} href={a.href} className="block bg-white rounded-2xl p-5 hover:shadow-md transition-shadow border border-border hover:border-primary/30">
+                <p className="font-bold text-sm text-primary mb-1">{a.title}</p>
+                <p className="text-xs text-muted leading-relaxed">{a.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* まとめ・Final CTA */}
       <section className="py-12 md:py-16 bg-gradient-to-r from-primary to-primary-dark text-white">
         <div className="max-w-3xl mx-auto px-4 text-center">

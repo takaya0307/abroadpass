@@ -295,6 +295,26 @@ export default function EigoZeroPage() {
         </div>
       </section>
 
+      {/* 関連記事 */}
+      <section className="py-12 bg-soft">
+        <div className="max-w-4xl mx-auto px-4">
+          <p className="font-bold text-foreground mb-5">あわせて読みたい</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {[
+              { href: "/ryugaku-philippines", title: "フィリピン語学留学の費用・特徴まとめ【2026年最新】", desc: "英語ゼロからでも集中して学べるフィリピン留学。1ヶ月の費用目安とセブ島の特徴を解説。" },
+              { href: "/ryugaku-towa", title: "語学留学とは？仕組み・期間・費用を徹底解説", desc: "英語力を伸ばすための語学留学について基礎からわかりやすく解説。" },
+              { href: "/ryugaku-vs-waho", title: "語学留学 vs ワーホリ どちらがいい？目的別に徹底比較", desc: "英語力・費用・年齢などの観点で比較。英語ゼロからどちらを選ぶかの判断基準も。" },
+              { href: "/waho-towa", title: "ワーホリとは？仕組みから費用・メリット・デメリットまで", desc: "ワーキングホリデーの基本情報をまるごと解説。" },
+            ].map((a) => (
+              <Link key={a.href} href={a.href} className="block bg-white rounded-2xl p-5 hover:shadow-md transition-shadow border border-border hover:border-primary/30">
+                <p className="font-bold text-sm text-primary mb-1">{a.title}</p>
+                <p className="text-xs text-muted leading-relaxed">{a.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* まとめ・Final CTA */}
       <section className="py-12 md:py-16 bg-gradient-to-r from-primary to-primary-dark text-white">
         <div className="max-w-3xl mx-auto px-4 text-center">

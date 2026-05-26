@@ -280,6 +280,26 @@ export default function CareerPage() {
         </div>
       </section>
 
+      {/* 関連記事 */}
+      <section className="py-12 bg-soft">
+        <div className="max-w-4xl mx-auto px-4">
+          <p className="font-bold text-foreground mb-5">あわせて読みたい</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {[
+              { href: "/waho-demerits", title: "ワーホリはやめた方がいい？デメリットと後悔しない判断基準", desc: "帰国後のキャリアも含めてデメリットを正直に解説。向いている人の判断基準も。" },
+              { href: "/shakaijin-ryugaku", title: "社会人が留学するには？費用・期間・注意点まとめ", desc: "有給・休職・退職の3パターンを徹底解説。キャリアへの影響も社会人目線でまとめました。" },
+              { href: "/ryugaku-vs-waho", title: "語学留学 vs ワーホリ どちらがいい？目的別に徹底比較", desc: "就職・キャリアの観点を含め7つの基準で比較。" },
+              { href: "/waho-towa", title: "ワーホリとは？仕組みから費用・メリット・デメリットまで", desc: "ワーキングホリデーの基本情報をまるごと解説。" },
+            ].map((a) => (
+              <Link key={a.href} href={a.href} className="block bg-white rounded-2xl p-5 hover:shadow-md transition-shadow border border-border hover:border-primary/30">
+                <p className="font-bold text-sm text-primary mb-1">{a.title}</p>
+                <p className="text-xs text-muted leading-relaxed">{a.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="py-12 md:py-16 bg-gradient-to-r from-primary to-primary-dark text-white">
         <div className="max-w-3xl mx-auto px-4 text-center">
