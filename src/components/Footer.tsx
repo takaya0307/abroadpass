@@ -32,6 +32,11 @@ export function Footer() {
             <p className="font-bold text-white mb-3">サイト情報</p>
             <ul className="space-y-2">
               <li>
+                <Link href="/about" className="hover:text-white transition-colors">
+                  運営者情報
+                </Link>
+              </li>
+              <li>
                 <Link href="/privacy" className="hover:text-white transition-colors">
                   プライバシーポリシー
                 </Link>
