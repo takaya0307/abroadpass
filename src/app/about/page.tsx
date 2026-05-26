@@ -110,22 +110,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* お問い合わせ */}
-      <section className="py-14 bg-soft">
-        <div className="max-w-3xl mx-auto px-4">
-          <h2 className="text-xl font-black mb-4">お問い合わせ</h2>
-          <div className="bg-white rounded-2xl p-6 text-sm leading-relaxed text-foreground/80 space-y-3">
-            <p>
-              記事の内容に関するご意見・修正のご指摘などは、現在準備中のお問い合わせフォームよりご連絡いただく予定です。
-            </p>
-            <p className="text-xs text-muted">
-              ※ エージェントの相談や学校選びについては、各エージェントに直接お問い合わせください。
-              当サイトでは個別の留学相談には対応しておりません。
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* ナビゲーション */}
       <section className="py-10 bg-white">
         <div className="max-w-3xl mx-auto px-4 flex flex-wrap gap-4 justify-center">
