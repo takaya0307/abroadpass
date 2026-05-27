@@ -527,7 +527,7 @@ export default function ShakaijinWahoPage() {
             エージェントへの相談は完全無料。希望の国・予算・スケジュールを伝えるだけで、
             あなたに合ったプランを提案してもらえます。
           </p>
-          <CtaButton href="/best-3" size="lg">
+          <CtaButton href="/best-3">
             おすすめエージェント3選を見る
           </CtaButton>
         </div>
