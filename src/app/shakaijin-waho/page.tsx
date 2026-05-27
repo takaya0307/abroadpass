@@ -88,7 +88,7 @@ const ageByCountry = [
   { country: "🇨🇦 カナダ", limit: "30歳以下（申請時）" },
   { country: "🇳🇿 ニュージーランド", limit: "30歳以下（申請時）" },
   { country: "🇬🇧 イギリス", limit: "30歳以下（申請時）" },
-  { country: "🇮🇪 アイルランド", limit: "35歳以下（申請時）" },
+  { country: "🇮🇪 アイルランド", limit: "30歳以下（申請時）※年間発給枠800人" },
   { country: "🇩🇪 ドイツ", limit: "30歳以下（申請時）" },
   { country: "🇫🇷 フランス", limit: "30歳以下（申請時）" },
   { country: "🇰🇷 韓国", limit: "30歳以下（申請時）" },
@@ -150,7 +150,7 @@ export default function ShakaijinWahoPage() {
               </tbody>
             </table>
           </div>
-          <p className="text-xs text-muted mt-3">※ 年齢制限・条件は変更になる場合があります。必ず各国大使館・公式サイトで最新情報をご確認ください。</p>
+          <p className="text-xs text-muted mt-3">※ 外務省公式情報（2026年4月時点）に基づきます。年齢制限・発給枠・条件は変更になる場合があります。必ず各国大使館・公式サイトで最新情報をご確認ください。</p>
         </div>
       </section>
 
