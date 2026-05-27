@@ -59,8 +59,9 @@ const timeline = [
   {
     period: "渡航前（1〜3ヶ月）",
     level: "挨拶・自己紹介レベル",
-    action: "アプリ（Duolingo・スタディサプリ）で最低限の英語を準備",
+    action: "アプリで最低限の英語を準備。「話すことへの恐怖感」だけ消しておくと渡航後がグッと楽になります。",
     icon: "📱",
+    speakCta: true,
   },
   {
     period: "渡航直後（1〜2ヶ月目）",
@@ -186,6 +187,24 @@ export default function EigoZeroPage() {
                 <p className="text-xs font-bold text-primary mb-1">{t.period}</p>
                 <p className="font-bold text-sm mb-2">{t.level}</p>
                 <p className="text-xs text-muted leading-relaxed">{t.action}</p>
+                {t.speakCta && (
+                  <div className="mt-2 pt-2 border-t border-border/50">
+                    <p className="text-xs text-muted leading-relaxed mb-1">
+                      <span className="font-bold text-foreground">人と話すのが怖い…</span>という方はAI相手に練習できる
+                      <strong className="text-foreground"> Speak</strong> が第一歩に最適。
+                    </p>
+                    <a
+                      href="https://px.a8.net/svt/ejp?a8mat=4B3LML+BAN2YA+5PZU+5YRHE"
+                      rel="nofollow sponsored"
+                      target="_blank"
+                      className="text-xs text-primary font-bold underline underline-offset-2 hover:text-primary-dark"
+                    >
+                      → 無料で試す
+                    </a>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="https://www10.a8.net/0.gif?a8mat=4B3LML+BAN2YA+5PZU+5YRHE" width={1} height={1} alt="" style={{ display: "inline" }} />
+                  </div>
+                )}
               </div>
             ))}
           </div>
