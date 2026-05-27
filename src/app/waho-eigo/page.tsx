@@ -155,6 +155,7 @@ const studyMethods = [
     cost: "月3,000〜8,000円",
     desc: "スピーキングの慣れを作るのに最も効果的。フィリピン人講師と毎日25分話すだけで、話すことへの抵抗感が大幅に下がります。Cambly・DMM英会話・ネイティブキャンプが人気。",
     recommended: true,
+    speakCta: true,
   },
   {
     icon: "📱",
@@ -337,38 +338,29 @@ export default function WahoEigoPage() {
                       <span className="text-xs text-muted ml-auto">{m.cost}</span>
                     </div>
                     <p className="text-sm text-muted leading-relaxed">{m.desc}</p>
+                    {m.speakCta && (
+                      <div className="mt-3 pt-3 border-t border-primary/20">
+                        <p className="text-sm text-muted mb-2 leading-relaxed">
+                          <span className="font-bold text-foreground">「人と話すのが恥ずかしくてまだ申し込めていない…」</span>という方は、
+                          まずAI相手に練習できる <strong className="text-foreground">Speak</strong> から始めるのがおすすめです。
+                          24時間・何度失敗してもOK。慣れてきたら人との会話に移行しやすくなります。
+                        </p>
+                        <a
+                          href="https://px.a8.net/svt/ejp?a8mat=4B3LML+BAN2YA+5PZU+5YRHE"
+                          rel="nofollow sponsored"
+                          target="_blank"
+                          className="inline-flex items-center gap-1.5 text-primary font-bold text-sm underline underline-offset-2 hover:text-primary-dark transition-colors"
+                        >
+                          → Speakを無料で試してみる
+                        </a>
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src="https://www10.a8.net/0.gif?a8mat=4B3LML+BAN2YA+5PZU+5YRHE" width={1} height={1} alt="" style={{ display: "inline" }} />
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* Speak PR */}
-          <div className="mt-5 p-5 bg-white rounded-2xl border-2 border-primary/30">
-            <div className="flex items-start gap-4">
-              <span className="text-2xl shrink-0">🤖</span>
-              <div className="flex-1">
-                <div className="flex items-center gap-2 mb-1 flex-wrap">
-                  <h3 className="font-bold text-sm">AI英会話アプリ「Speak」— 時間・場所を選ばずスピーキング練習</h3>
-                  <span className="text-xs bg-accent text-white px-2 py-0.5 rounded-full shrink-0">PR</span>
-                </div>
-                <p className="text-sm text-muted leading-relaxed mb-3">
-                  AIが会話相手になるので、人と話すのが怖い初心者でも気軽に始められます。
-                  「発音の癖」もAIが即座にフィードバック。ワーホリ前のスピーキング強化に特におすすめです。
-                  無料トライアルで試せます。
-                </p>
-                <a
-                  href="https://px.a8.net/svt/ejp?a8mat=4B3LML+BAN2YA+5PZU+5YRHE"
-                  rel="nofollow sponsored"
-                  target="_blank"
-                  className="inline-flex items-center gap-2 bg-primary text-white font-bold rounded-full px-6 py-2.5 text-sm hover:bg-primary-dark transition-colors"
-                >
-                  Speakを無料で試す →
-                </a>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="https://www10.a8.net/0.gif?a8mat=4B3LML+BAN2YA+5PZU+5YRHE" width={1} height={1} alt="" style={{ display: "inline" }} />
-              </div>
-            </div>
           </div>
 
           <div className="mt-6 p-5 bg-soft rounded-2xl border border-border">
