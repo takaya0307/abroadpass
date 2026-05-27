@@ -528,7 +528,7 @@ export default function ShakaijinWahoPage() {
             あなたに合ったプランを提案してもらえます。
           </p>
           <CtaButton href="/best-3">
-            おすすめエージェント3選を見る
+            おすすめエージェント5選を見る →
           </CtaButton>
         </div>
       </section>

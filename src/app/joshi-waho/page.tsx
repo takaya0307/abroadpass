@@ -433,7 +433,7 @@ export default function JoshiWahoPage() {
             準備を整えた上で渡航すれば、きっと最高の1年になります。
           </p>
           <CtaButton href="/best-3">
-            おすすめエージェント3選を見る
+            おすすめエージェント5選を見る →
           </CtaButton>
         </div>
       </section>
