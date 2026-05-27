@@ -211,6 +211,34 @@ export default function SmaruPage() {
         </div>
       </section>
 
+      {/* 対応国 */}
+      <section className="py-10 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <SectionHeading tag="h2" sub="留学・ワーホリ対応国">
+            スマ留の対応国一覧
+          </SectionHeading>
+          <div className="flex flex-wrap gap-2 mb-3">
+            {[
+              { flag: "🇵🇭", name: "フィリピン" },
+              { flag: "🇦🇺", name: "オーストラリア" },
+              { flag: "🇨🇦", name: "カナダ" },
+              { flag: "🇳🇿", name: "ニュージーランド" },
+              { flag: "🇬🇧", name: "イギリス" },
+              { flag: "🇮🇪", name: "アイルランド" },
+              { flag: "🇲🇹", name: "マルタ" },
+              { flag: "🇺🇸", name: "アメリカ" },
+              { flag: "🇦🇪", name: "ドバイ" },
+              { flag: "🇿🇦", name: "南アフリカ" },
+            ].map((c) => (
+              <span key={c.name} className="inline-flex items-center gap-1 bg-soft border border-border rounded-full px-3 py-1 text-sm font-medium">
+                {c.flag} {c.name}
+              </span>
+            ))}
+          </div>
+          <p className="text-xs text-muted">※ 対応国・プランは変更になる場合があります。最新情報は公式サイトまたは無料相談でご確認ください。</p>
+        </div>
+      </section>
+
       {/* メリット・デメリット */}
       <section className="py-14 bg-soft">
         <div className="max-w-4xl mx-auto px-4">

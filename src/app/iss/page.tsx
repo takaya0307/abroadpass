@@ -151,6 +151,33 @@ export default function IssPage() {
         </div>
       </section>
 
+      {/* 対応国 */}
+      <section className="py-10 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <SectionHeading tag="h2" sub="留学・ワーホリ対応国">
+            ISS留学ライフの対応国一覧
+          </SectionHeading>
+          <div className="flex flex-wrap gap-2 mb-3">
+            {[
+              { flag: "🇨🇦", name: "カナダ" },
+              { flag: "🇺🇸", name: "アメリカ" },
+              { flag: "🇬🇧", name: "イギリス" },
+              { flag: "🇮🇪", name: "アイルランド" },
+              { flag: "🇦🇺", name: "オーストラリア" },
+              { flag: "🇳🇿", name: "ニュージーランド" },
+              { flag: "🇲🇹", name: "マルタ" },
+              { flag: "🇵🇭", name: "フィリピン" },
+              { flag: "🇰🇷", name: "韓国" },
+            ].map((c) => (
+              <span key={c.name} className="inline-flex items-center gap-1 bg-soft border border-border rounded-full px-3 py-1 text-sm font-medium">
+                {c.flag} {c.name}
+              </span>
+            ))}
+          </div>
+          <p className="text-xs text-muted">※ 対応国・プランは変更になる場合があります。最新情報は公式サイトまたは無料相談でご確認ください。</p>
+        </div>
+      </section>
+
       {/* メリット・デメリット */}
       <section className="py-14 bg-soft">
         <div className="max-w-4xl mx-auto px-4">
